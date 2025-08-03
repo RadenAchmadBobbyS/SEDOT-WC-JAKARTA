@@ -8,7 +8,6 @@ import { Phone, Clock, MapPin, Star, CheckCircle, Truck, ArrowLeft, Users, Award
 import ContactForm from "@/components/contact-form"
 import Navbar from "@/components/navbar"
 import PageLoader from "@/components/page-loader"
-import { SmoothReveal } from "@/components/SmoothReveal"
 
 export const metadata: Metadata = {
   title: "Sedot WC Jakarta Selatan Terpercaya 24 Jam - Kebayoran, Cilandak, Jagakarsa | Harga Murah",

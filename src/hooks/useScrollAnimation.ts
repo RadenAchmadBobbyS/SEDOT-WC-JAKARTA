@@ -54,7 +54,7 @@ export function useScrollAnimation(options: UseScrollAnimationOptions = {}) {
   return { isVisible, elementRef };
 }
 
-export function useStaggeredAnimation(items: any[], baseDelay: number = 0) {
+export function useStaggeredAnimation(items: unknown[], baseDelay: number = 0) {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
   const elementRefs = useRef<(HTMLElement | null)[]>([]);
 
