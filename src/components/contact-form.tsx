@@ -38,27 +38,6 @@ export default function ContactForm() {
         `⏰ *Waktu Request:* ${new Date().toLocaleString('id-ID')}%0A%0A` +
         `_Mohon konfirmasi ketersediaan dan estimasi biaya. Terima kasih!_`
 
-      // Option 2: Email Integration (jika ada endpoint)
-      const emailData = {
-        to: 'admin@sedotwcmandala.com',
-        subject: `Permintaan Layanan - ${formData.name} (${formData.area})`,
-        body: {
-          name: formData.name,
-          phone: formData.phone,
-          area: formData.area,
-          address: formData.address,
-          message: formData.message,
-          timestamp: new Date().toISOString()
-        }
-      }
-
-      // Option 3: Database Integration (jika ada API)
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(emailData.body)
-      // })
-
       // Simulate processing time
       await new Promise((resolve) => setTimeout(resolve, 1500))
 

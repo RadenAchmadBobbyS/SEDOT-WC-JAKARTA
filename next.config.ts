@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
   compress: true,
 
   // Performance optimizations
-  swcMinify: true,
   poweredByHeader: false,
 
   // Security headers

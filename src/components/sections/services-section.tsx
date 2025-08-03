@@ -3,12 +3,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Shield, CheckCircle, Users } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { services } from "@/data/services";
 
 export function ServicesSection() {
-  const [currentAwardSlide, setCurrentAwardSlide] = useState(0);
   const [currentServiceSlide, setCurrentServiceSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   
@@ -18,7 +17,6 @@ export function ServicesSection() {
       const newIsMobile = window.innerWidth < 768;
       if (newIsMobile !== isMobile) {
         setIsMobile(newIsMobile);
-        setCurrentAwardSlide(0);
       }
     };
     
@@ -27,7 +25,6 @@ export function ServicesSection() {
     return () => window.removeEventListener('resize', checkMobile);
   }, [isMobile]);
 
-  const totalAwardSlides = 3;
   const totalServiceSlides = services.length;
 
   // Touch event handling for service slider
@@ -61,17 +58,6 @@ export function ServicesSection() {
       setCurrentServiceSlide(totalServiceSlides - 1);
     }
   };
-
-  // Auto-slide functionality for awards (mobile only)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (window.innerWidth < 768) {
-        setCurrentAwardSlide((prev) => (prev + 1) % totalAwardSlides);
-      }
-    }, 7000);
-
-    return () => clearInterval(interval);
-  }, [totalAwardSlides]);
 
   return (
     <section className="py-24 bg-orange-300 text-white relative overflow-hidden">

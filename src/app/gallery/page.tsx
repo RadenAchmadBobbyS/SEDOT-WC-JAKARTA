@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Camera, MapPin, Clock, CheckCircle, ArrowLeft } from "lucide-react"
 
@@ -18,7 +17,7 @@ export const metadata: Metadata = {
     siteName: "Sedot WC Jakarta",
     images: [
       {
-        url: "/images/gallery-og.jpg",
+        url: "/jasa-sedot-wc.png",
         width: 1200,
         height: 630,
         alt: "Gallery Layanan Sedot WC Jakarta",
@@ -31,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Gallery Layanan Sedot WC Jakarta",
     description: "Dokumentasi lengkap layanan sedot WC profesional di Jakarta",
-    images: ["/images/gallery-twitter.jpg"],
+    images: ["/jasa-sedot-wc.png"],
   },
   alternates: {
     canonical: "https://sedotwcmandala.com/gallery",
@@ -41,6 +40,42 @@ export const metadata: Metadata = {
 const galleryImages = [
   {
     id: 1,
+    src: "/sedot-wc-jakarta/sedot-tinja (1).webp",
+    alt: "Layanan sedot tinja profesional dengan peralatan canggih",
+    title: "Sedot Tinja Profesional",
+    location: "Jakarta Selatan",
+    category: "Professional",
+    description: "Layanan sedot tinja dengan teknologi modern dan higienis",
+  },
+  {
+    id: 2,
+    src: "/sedot-wc-jakarta/sedot-tinja (2).webp",
+    alt: "Tim ahli sedot tinja berpengalaman",
+    title: "Tim Ahli Tinja",
+    location: "Jakarta Timur",
+    category: "Expert",
+    description: "Tim berpengalaman khusus penanganan limbah tinja",
+  },
+  {
+    id: 3,
+    src: "/sedot-wc-jakarta/sedot-tinja (3).webp",
+    alt: "Proses sedot tinja yang aman dan bersih",
+    title: "Proses Aman & Bersih",
+    location: "Jakarta Utara",
+    category: "Safety",
+    description: "Proses sedot tinja dengan standar keamanan tinggi",
+  },
+  {
+    id: 4,
+    src: "/sedot-wc-jakarta/sedot-tinja (4).webp",
+    alt: "Hasil pembersihan tinja yang maksimal",
+    title: "Hasil Maksimal",
+    location: "Jakarta Pusat",
+    category: "Results",
+    description: "Hasil pembersihan tinja yang bersih dan tuntas",
+  },
+  {
+    id: 5,
     src: "/images/sedot-1.webp",
     alt: "Truk sedot WC modern dengan peralatan canggih",
     title: "Peralatan Modern",
@@ -49,7 +84,7 @@ const galleryImages = [
     description: "Truk sedot WC dengan teknologi terdepan",
   },
   {
-    id: 2,
+    id: 6,
     src: "/images/sedot-2.webp",
     alt: "Teknisi profesional sedang bekerja",
     title: "Tim Profesional",
@@ -58,7 +93,7 @@ const galleryImages = [
     description: "Teknisi berpengalaman dengan standar keselamatan tinggi",
   },
   {
-    id: 3,
+    id: 7,
     src: "/images/sedot-4.webp",
     alt: "Hasil pembersihan septic tank yang bersih",
     title: "Hasil Berkualitas",
@@ -67,7 +102,7 @@ const galleryImages = [
     description: "Septic tank bersih setelah layanan profesional",
   },
   {
-    id: 4,
+    id: 8,
     src: "/images/sedot-6.webp",
     alt: "Proses penyedotan dengan peralatan modern",
     title: "Proses Penyedotan",
@@ -76,7 +111,7 @@ const galleryImages = [
     description: "Proses penyedotan menggunakan teknologi modern",
   },
   {
-    id: 5,
+    id: 9,
     src: "/images/sedot-7.webp",
     alt: "Layanan sedot WC rumah tinggal",
     title: "Layanan Residensial",
@@ -85,7 +120,7 @@ const galleryImages = [
     description: "Layanan khusus untuk rumah tinggal",
   },
   {
-    id: 6,
+    id: 10,
     src: "/images/sedot-wc-1.webp",
     alt: "Layanan sedot WC gedung perkantoran",
     title: "Layanan Komersial",
@@ -94,7 +129,7 @@ const galleryImages = [
     description: "Layanan untuk gedung perkantoran dan komersial",
   },
   {
-    id: 7,
+    id: 11,
     src: "/images/sedot-wc-2.webp",
     alt: "Inspeksi septic tank dengan alat profesional",
     title: "Inspeksi Menyeluruh",
@@ -103,7 +138,7 @@ const galleryImages = [
     description: "Inspeksi detail menggunakan alat profesional",
   },
   {
-    id: 8,
+    id: 12,
     src: "/images/sedot-wc-3.webp",
     alt: "Layanan darurat 24 jam",
     title: "Layanan Darurat",
@@ -112,7 +147,7 @@ const galleryImages = [
     description: "Siap melayani panggilan darurat 24 jam",
   },
   {
-    id: 9,
+    id: 13,
     src: "/images/sedot-wc-6.webp",
     alt: "Layanan sedot WC apartemen",
     title: "Layanan Apartemen",
@@ -121,7 +156,7 @@ const galleryImages = [
     description: "Spesialisasi layanan untuk apartemen dan kondominium",
   },
   {
-    id: 10,
+    id: 14,
     src: "/images/sedot-wc-7.webp",
     alt: "Layanan sedot WC industri",
     title: "Layanan Industri",
@@ -130,8 +165,8 @@ const galleryImages = [
     description: "Layanan khusus untuk kawasan industri",
   },
   {
-    id: 11,
-    src: "/images/sedot-wc-8.webp",
+    id: 15,
+    src: "/images/sedot-wc-4.webp",
     alt: "Perawatan dan perbaikan septic tank",
     title: "Perawatan & Perbaikan",
     location: "Jakarta Selatan",
@@ -139,7 +174,7 @@ const galleryImages = [
     description: "Layanan perawatan dan perbaikan septic tank",
   },
   {
-    id: 12,
+    id: 16,
     src: "/images/sedot-wc-jakarta.webp",
     alt: "Proses ramah lingkungan",
     title: "Ramah Lingkungan",
@@ -163,6 +198,9 @@ const categories = [
   "Industrial",
   "Maintenance",
   "Eco-Friendly",
+  "Professional",
+  "Expert",
+  "Safety",
 ]
 
 export default function GalleryPage() {
@@ -238,12 +276,12 @@ export default function GalleryPage() {
       {/* Gallery Grid */}
       <section className="py-16">
         <div className="container mx-auto px-6 lg:px-8 xl:px-12">
-          {/* Masonry Grid */}
-          <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          {/* Clean Organized Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
-              <Card
+              <div
                 key={image.id}
-                className={`break-inside-avoid group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] ${
+                className={`group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] aspect-square rounded-lg bg-white ${
                   index % 3 === 0
                     ? "animate-fade-in"
                     : index % 3 === 1
@@ -251,14 +289,15 @@ export default function GalleryPage() {
                       : "animate-fade-in animation-delay-300"
                 }`}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative w-full h-full overflow-hidden rounded-lg">
                   <Image
                     src={image.src || "/placeholder.svg"}
                     alt={image.alt}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-700"
+                    fill
+                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
                     loading={index < 6 ? "eager" : "lazy"}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    style={{ objectFit: 'cover' }}
                   />
 
                   {/* Overlay */}
@@ -276,7 +315,7 @@ export default function GalleryPage() {
                     </div>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
 

@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import { Phone, Clock, Truck, Home, Info, MessageCircle, X, ChevronDown, MapPin, Camera, Image as ImageIcon, Grip } from "lucide-react"
+import { Phone, Clock, Truck, Home, Info, MessageCircle, ChevronDown, MapPin, Camera, Image as ImageIcon, Grip } from "lucide-react"
 import { jakartaAreas } from "@/data/areas"
 
 export default function Navbar() {

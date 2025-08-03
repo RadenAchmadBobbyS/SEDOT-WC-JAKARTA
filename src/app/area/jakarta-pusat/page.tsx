@@ -691,7 +691,7 @@ export default function JakartaPusatPage() {
                     </Badge>
                   </div>
 
-                  <p className="text-sm lg:text-base text-gray-600 mb-3 lg:mb-4 italic leading-relaxed">"{testimonial.comment}"</p>
+                  <p className="text-sm lg:text-base text-gray-600 mb-3 lg:mb-4 italic leading-relaxed">&ldquo;{testimonial.comment}&rdquo;</p>
 
                   <div className="flex items-center justify-between">
                     <div>

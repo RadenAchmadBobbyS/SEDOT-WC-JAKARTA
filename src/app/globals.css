@@ -445,3 +445,12 @@ html {
 .animate-wave-reverse {
   animation: wave-motion 10s ease-in-out infinite reverse;
 }
+
+/* Custom height classes for gallery */
+.h-88 {
+  height: 22rem; /* 352px */
+}
+
+.h-96 {
+  height: 24rem; /* 384px */
+}

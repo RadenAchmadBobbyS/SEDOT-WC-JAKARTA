@@ -713,7 +713,7 @@ export default function JakartaTimurPage() {
                     </Badge>
                   </div>
 
-                  <p className="text-gray-600 mb-3 sm:mb-4 italic leading-relaxed text-sm sm:text-base">"{testimonial.comment}"</p>
+                  <p className="text-gray-600 mb-3 sm:mb-4 italic leading-relaxed text-sm sm:text-base">&ldquo;{testimonial.comment}&rdquo;</p>
 
                   <div className="flex items-center justify-between">
                     <div>
