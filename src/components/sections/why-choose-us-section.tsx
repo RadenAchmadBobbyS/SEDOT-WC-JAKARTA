@@ -30,7 +30,7 @@ export function WhyChooseUsSection() {
         <div className="text-center mb-16 px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-6 text-black leading-tight">
             <span className="block sm:inline">Mengapa Memilih</span>
-            <span className="block text-blue-600">Jasa Sedot WC Jakarta Kami?</span>
+            <span className="block text-blue-600">Jasa Sedot WC Mandala Kami?</span>
           </h2>
           <p className="text-lg sm:text-xl text-black max-w-3xl mx-auto font-medium leading-relaxed">
             <span className="font-bold text-blue-600">Sedot WC Jakarta Terbaik</span> dengan pengalaman 9+ tahun melayani masyarakat Jakarta. 

@@ -66,7 +66,7 @@ export function AreasSection() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4 text-black">
-            Jasa Sedot WC Jakarta - Area Layanan
+            Jasa Sedot WC Mandala - Area Layanan
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto font-bold">
             <span className="font-black text-blue-600">Sedot WC Jakarta Terdekat</span> melayani seluruh wilayah DKI Jakarta dengan tim profesional dan peralatan lengkap. 

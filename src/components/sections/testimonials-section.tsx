@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         <div className="text-center mb-12 sm:mb-16 px-4 sm:px-6">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4 text-black">
             <span className="block sm:inline">Testimoni Pelanggan</span>
-            <span className="block text-blue-500">Jasa Sedot WC Jakarta</span>
+            <span className="block text-blue-500">Jasa Sedot WC Mandala</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
             <span className="font-bold text-blue-600">Ulasan Sedot WC Jakarta</span> dari pelanggan setia kami. 

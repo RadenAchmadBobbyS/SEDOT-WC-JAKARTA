@@ -79,7 +79,7 @@ export function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-12 px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-extrabold tracking-tight mb-6 text-black leading-tight">
-            <span className="block sm:inline">Jasa Sedot WC Jakarta</span>
+            <span className="block sm:inline">Jasa Sedot WC Mandala</span>
             <span className="block sm:inline"> Profesional & Terpercaya</span>
             <span className="block text-blue-700"> Melayani Seluruh DKI Jakarta</span>
           </h2>
@@ -176,7 +176,7 @@ export function ServicesSection() {
           <div className="mb-16">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Layanan Sedot WC Jakarta Profesional Terpercaya
+                Layanan Sedot WC Mandala Profesional Terpercaya
               </h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Jasa Sedot WC Jakarta terlengkap dengan layanan 24 jam, harga murah, teknisi profesional, dan jangkauan ke seluruh DKI Jakarta. 
