@@ -157,7 +157,7 @@ export function HeroSection() {
               {/* Main service truck image */}
               <div className="relative z-20">
                 <Image
-                  src="/jasa-sedot-wc.png"
+                  src="/jasa-sedot-wc.webp"
                   alt="Layanan Sedot WC Jakarta - Truck Profesional"
                   width={600}
                   height={500}
