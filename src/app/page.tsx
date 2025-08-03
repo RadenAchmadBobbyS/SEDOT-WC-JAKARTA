@@ -1,103 +1,201 @@
-import Image from "next/image";
+import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
-export default function Home() {
+// Static imports for critical components
+import Navbar from "@/components/navbar";
+import PageLoader from "@/components/page-loader";
+import { HeroSection } from "@/components/sections/hero-section";
+
+// Dynamic imports for non-critical sections with loading fallbacks
+const ServicesSection = dynamic(() => import("@/components/sections/services-section").then(mod => ({ default: mod.ServicesSection })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
+});
+
+const AreasSection = dynamic(() => import("@/components/sections/areas-section").then(mod => ({ default: mod.AreasSection })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
+});
+
+const WhyChooseUsSection = dynamic(() => import("@/components/sections/why-choose-us-section").then(mod => ({ default: mod.WhyChooseUsSection })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
+});
+
+const TestimonialsSection = dynamic(() => import("@/components/sections/testimonials-section").then(mod => ({ default: mod.TestimonialsSection })), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
+});
+
+const ContactForm = dynamic(() => import("@/components/contact-form"), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-96"></div>,
+});
+
+// Generate metadata for SEO (SSR)
+export const metadata: Metadata = {
+  title: 'Jasa Sedot WC Jakarta Terpercaya 24 Jam - Murah & Profesional',
+  description: 'Jasa Sedot WC Jakarta terpercaya dengan layanan 24 jam, harga murah mulai Rp 100.000. Melayani seluruh DKI Jakarta dengan teknisi profesional dan bergaransi.',
+  keywords: 'sedot wc jakarta, jasa sedot wc jakarta murah, sedot wc 24 jam jakarta, sedot wc jakarta selatan barat timur utara pusat',
+  openGraph: {
+    title: 'Jasa Sedot WC Jakarta Terpercaya 24 Jam',
+    description: 'Layanan sedot WC Jakarta profesional dengan harga terjangkau. Respon cepat, teknisi berpengalaman, bergaransi.',
+    type: 'website',
+    locale: 'id_ID',
+  },
+  alternates: {
+    canonical: '/',
+  },
+};
+
+// SSR-optimized Homepage Component
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <PageLoader>
+      <div className="min-h-screen">
+        <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Critical above-the-fold content - loaded immediately */}
+        <HeroSection />
+
+        {/* Non-critical sections - loaded with dynamic imports and suspense */}
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96"></div>}>
+          <ServicesSection />
+        </Suspense>
+
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96"></div>}>
+          <AreasSection />
+        </Suspense>
+
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96"></div>}>
+          <WhyChooseUsSection />
+        </Suspense>
+
+        <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96"></div>}>
+          <TestimonialsSection />
+        </Suspense>
+
+        {/* Contact Section */}
+        <section className="py-24 bg-gradient-to-br from-orange-400 via-orange-300 to-orange-300">
+          <div className="container mx-auto px-6 lg:px-8 xl:px-12">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+                Hubungi Kami Sekarang
+              </h2>
+              <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+                Konsultasi gratis dan dapatkan penawaran terbaik untuk kebutuhan sedot WC Anda
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
+              {/* Left Side - Contact Information */}
+              <div className="space-y-8">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold text-black mb-6">Informasi Kontak</h3>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">📞</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-black">Telepon/WhatsApp</h4>
+                        <p className="text-lg font-bold text-black">0812-3456-7890</p>
+                        <p className="text-sm text-gray-700">24 Jam Siaga</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">📧</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-black">Email</h4>
+                        <p className="text-lg text-black">info@sedotwcjakarta.com</p>
+                        <p className="text-sm text-gray-700">Respon dalam 1 jam</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">🕒</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-black">Jam Operasional</h4>
+                        <p className="text-lg text-black">24 Jam</p>
+                        <p className="text-sm text-gray-700">Setiap hari termasuk hari libur</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                        <span className="text-2xl">📍</span>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-black">Area Layanan</h4>
+                        <p className="text-lg text-black">Seluruh Jakarta</p>
+                        <p className="text-sm text-gray-700">Jakarta Selatan, Barat, Timur, Utara, Pusat</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8 p-6 bg-white/10 rounded-xl">
+                    <h4 className="font-bold text-black mb-3">✨ Keunggulan Kami</h4>
+                    <ul className="space-y-2 text-sm text-gray-800">
+                      <li>✅ Gratis konsultasi dan survei</li>
+                      <li>✅ Tim berpengalaman 9+ tahun</li>
+                      <li>✅ Peralatan modern & higienis</li>
+                      <li>✅ Harga transparan tanpa biaya tersembunyi</li>
+                      <li>✅ Garansi layanan</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right Side - Contact Form */}
+              <div>
+                <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96 rounded-lg"></div>}>
+                  <ContactForm />
+                </Suspense>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-white text-black py-12">
+          <div className="container mx-auto px-6 lg:px-8 xl:px-12">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-bold mb-4">Jasa Sedot WC Jakarta</h3>
+                <p className="text-gray-600 mb-4">
+                  Layanan sedot WC terpercaya dengan pengalaman 9+ tahun melayani masyarakat Jakarta.
+                </p>
+              </div>
+              
+              <div>
+                <h4 className="font-bold mb-4">Area Layanan</h4>
+                <ul className="space-y-2 text-gray-600">
+                  <li>Jakarta Selatan</li>
+                  <li>Jakarta Barat</li>
+                  <li>Jakarta Timur</li>
+                  <li>Jakarta Utara</li>
+                  <li>Jakarta Pusat</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-bold mb-4">Kontak</h4>
+                <div className="space-y-2 text-gray-600">
+                  <p>📞 081234567890</p>
+                  <p>📧 info@sedotwcjakarta.com</p>
+                  <p>🕒 24 Jam Siaga</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+              <p>&copy; 2024 Jasa Sedot WC Jakarta. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </PageLoader>
   );
 }

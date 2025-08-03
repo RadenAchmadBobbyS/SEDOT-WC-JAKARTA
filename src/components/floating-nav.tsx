@@ -1,0 +1,79 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { MapPin, X } from "lucide-react";
+import { jakartaAreas } from "@/data/areas";
+
+export function FloatingNav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="fixed bottom-35 right-4 z-50">
+      {/* Floating Navigation Button */}
+      <button
+        onClick={toggleDropdown}
+        className="w-12 h-12 rounded-full shadow-lg transition-all duration-200 flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+      >
+        <MapPin className="h-5 w-5 text-white" />
+      </button>
+
+      {/* Area Dropdown */}
+      {isOpen && (
+        <div className="absolute bottom-14 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 py-4 animate-in slide-in-from-bottom-2 duration-200">
+          {/* Close Button - Inside menu at top right */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-3 right-3 w-5 h-5 rounded-full bg-gray-100 hover:bg-red-100 transition-colors duration-200 flex items-center justify-center group"
+          >
+            <X className="h-4 w-4 text-gray-600 group-hover:text-red-600" />
+          </button>
+
+          <div className="px-4 pb-3 border-b border-gray-100 pr-12">
+            <h3 className="font-bold text-gray-800 text-sm flex items-center gap-2">
+              <MapPin className="h-4 w-4 text-orange-500" />
+              Area Layanan Jakarta
+            </h3>
+            <p className="text-xs text-gray-600 mt-1">Pilih area sesuai lokasi Anda</p>
+          </div>
+          <div className="py-2 max-h-64 overflow-y-auto">
+            {jakartaAreas.map((area, index) => (
+              <Link
+                key={area.slug}
+                href={`/area/${area.slug}`}
+                onClick={() => setIsOpen(false)}
+                className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors group"
+              >
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 ${
+                  index % 2 === 0 ? 'bg-blue-100 text-blue-600' : 'bg-orange-100 text-orange-600'
+                }`}>
+                  🏢
+                </div>
+                <div className="flex-1">
+                  <div className="font-semibold text-gray-800 text-sm group-hover:text-orange-600 transition-colors">
+                    {area.name}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-0.5">
+                    Respon 30-45 menit
+                  </div>
+                </div>
+                <div className="text-green-500 text-xs font-semibold">
+                  24/7
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="px-4 pt-3 border-t border-gray-100">
+            <p className="text-xs text-gray-500 text-center">
+              📞 <span className="font-semibold">0812-3456-7890</span> untuk konsultasi
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
