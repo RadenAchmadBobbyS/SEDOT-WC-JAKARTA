@@ -19,10 +19,10 @@ export const metadata: Metadata = {
       "Perusahaan sedot WC terpercaya dengan 9+ tahun pengalaman melayani Jakarta. Tim profesional, teknologi modern, bergaransi.",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/tentang-kami",
+    url: "https://sedotwcmandala.com/tentang-kami",
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/tentang-kami",
+    canonical: "https://sedotwcmandala.com/tentang-kami",
   },
 }
 

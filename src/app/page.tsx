@@ -109,7 +109,7 @@ export default function HomePage() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Email</h4>
-                        <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">info@sedotwcjakarta.com</p>
+                        <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">info@sedotwcmandala.com</p>
                         <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Respon dalam 1 jam</p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ export default function HomePage() {
                 <h4 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Kontak</h4>
                 <div className="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
                   <p>📞 0812-1906-7233</p>
-                  <p className="break-all">📧 info@sedotwcjakarta.com</p>
+                  <p className="break-all">📧 info@sedotwcmandala.com</p>
                   <p>🕒 24 Jam Siaga</p>
                 </div>
               </div>

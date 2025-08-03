@@ -206,7 +206,7 @@ export function HeroSection() {
         <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala"
+            href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala sekarang"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group"

@@ -19,10 +19,10 @@ export const metadata: Metadata = {
       "Hubungi kami kapan saja untuk layanan sedot WC profesional di Jakarta. Telepon & WhatsApp: 0812-1906-7233. Konsultasi gratis!",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/kontak",
+    url: "https://sedotwcmandala.com/kontak",
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/kontak",
+    canonical: "https://sedotwcmandala.com/kontak",
   },
 }
 
@@ -48,9 +48,9 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    primary: "info@sedotwc-jakarta.com",
+    primary: "info@sedotwcmandala.com",
     secondary: "Untuk pertanyaan dan konsultasi",
-    action: "mailto:info@sedotwc-jakarta.com",
+    action: "mailto:info@sedotwcmandala.com",
     actionText: "Kirim Email",
     color: "gray",
   },
@@ -231,10 +231,10 @@ export default function KontakPage() {
                       <h3 className="text-xl font-bold text-gray-900 mb-2">📧 Email</h3>
                       <p className="text-gray-600 mb-2">Untuk pertanyaan dan konsultasi</p>
                       <a
-                        href="mailto:info@sedotwc-jakarta.com"
+                        href="mailto:info@sedotwcmandala.com"
                         className="text-lg font-semibold text-purple-600 hover:text-purple-700"
                       >
-                        info@sedotwc-jakarta.com
+                        info@sedotwcmandala.com
                       </a>
                     </div>
                   </div>

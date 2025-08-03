@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "⭐ Layanan Sedot WC Jakarta Pusat TERPERCAYA ⭐ Melayani semua kecamatan 24 jam. Teknisi Profesional, Bergaransi, Respon Tercepat.",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/jakarta-pusat",
+    url: "https://sedotwcmandala.com/jakarta-pusat",
     images: [
       {
         url: "/og-sedot-wc-jakarta-pusat.jpg",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/jakarta-pusat",
+    canonical: "https://sedotwcmandala.com/jakarta-pusat",
   },
   robots: {
     index: true,

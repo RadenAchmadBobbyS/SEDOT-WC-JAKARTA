@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "⭐ Layanan Sedot WC Jakarta Barat TERPERCAYA ⭐ Melayani semua kecamatan 24 jam. Teknisi Profesional, Bergaransi.",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/jakarta-barat",
+    url: "https://sedotwcmandala.com/jakarta-barat",
     images: [
       {
         url: "/og-sedot-wc-jakarta-barat.jpg",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/jakarta-barat",
+    canonical: "https://sedotwcmandala.com/jakarta-barat",
   },
   robots: {
     index: true,

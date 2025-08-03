@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "⭐ Layanan Sedot WC Jakarta Timur TERPERCAYA ⭐ Melayani semua kecamatan 24 jam. Teknisi Profesional, Bergaransi, Respon Cepat.",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/jakarta-timur",
+    url: "https://sedotwcmandala.com/jakarta-timur",
     images: [
       {
         url: "/og-sedot-wc-jakarta-timur.jpg",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/jakarta-timur",
+    canonical: "https://sedotwcmandala.com/jakarta-timur",
   },
   robots: {
     index: true,

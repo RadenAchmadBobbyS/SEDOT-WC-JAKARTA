@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gallery Layanan Sedot WC Jakarta | Dokumentasi Profesional",
     description: "Dokumentasi lengkap layanan sedot WC profesional di Jakarta dengan hasil kerja berkualitas tinggi.",
-    url: "https://sedotwcjakarta.com/gallery",
+    url: "https://sedotwcmandala.com/gallery",
     siteName: "Sedot WC Jakarta",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: ["/images/gallery-twitter.jpg"],
   },
   alternates: {
-    canonical: "https://sedotwcjakarta.com/gallery",
+    canonical: "https://sedotwcmandala.com/gallery",
   },
 }
 
@@ -325,7 +325,7 @@ export default function GalleryPage() {
             name: "Gallery Layanan Sedot WC Jakarta",
             description:
               "Dokumentasi lengkap layanan sedot WC profesional di Jakarta dengan peralatan modern dan tim berpengalaman",
-            url: "https://sedotwcjakarta.com/gallery",
+            url: "https://sedotwcmandala.com/gallery",
             provider: {
               "@type": "LocalBusiness",
               name: "Sedot WC Jakarta",
@@ -338,7 +338,7 @@ export default function GalleryPage() {
             },
             image: galleryImages.map((img) => ({
               "@type": "ImageObject",
-              url: `https://sedotwcjakarta.com${img.src}`,
+              url: `https://sedotwcmandala.com${img.src}`,
               name: img.title,
               description: img.description,
               contentLocation: img.location,

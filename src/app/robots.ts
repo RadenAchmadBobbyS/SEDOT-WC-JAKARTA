@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://sedotwc-jakarta.com/sitemap.xml',
-    host: 'https://sedotwc-jakarta.com',
+    sitemap: 'https://sedotwcmandala.com/sitemap.xml',
+    host: 'https://sedotwcmandala.com',
   }
 }

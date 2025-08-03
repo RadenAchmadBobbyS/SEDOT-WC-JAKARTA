@@ -40,7 +40,7 @@ export default function ContactForm() {
 
       // Option 2: Email Integration (jika ada endpoint)
       const emailData = {
-        to: 'admin@sedotwc-jakarta.com',
+        to: 'admin@sedotwcmandala.com',
         subject: `Permintaan Layanan - ${formData.name} (${formData.area})`,
         body: {
           name: formData.name,

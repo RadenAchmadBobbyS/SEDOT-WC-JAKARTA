@@ -14,7 +14,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sedotwc-jakarta.com"),
+  metadataBase: new URL("https://sedotwcmandala.com"),
   title: {
     default: "Sedot WC Jakarta - Layanan Sedot WC Profesional 24 Jam Terpercaya | Harga Murah Bergaransi",
     template: "%s | SedotWC Jakarta - Layanan Terpercaya 24 Jam",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     "sedot wc mall",
     "sedot wc restoran",
   ].join(", "),
-  authors: [{ name: "SedotWC Jakarta", url: "https://sedotwc-jakarta.com" }],
+  authors: [{ name: "SedotWC Jakarta", url: "https://sedotwcmandala.com" }],
   creator: "SedotWC Jakarta",
   publisher: "SedotWC Jakarta",
   formatDetection: {
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com",
+    url: "https://sedotwcmandala.com",
     siteName: "SedotWC Jakarta - Layanan Sedot WC Profesional 24 Jam",
     title: "Sedot WC Jakarta Terpercaya 24 Jam - Harga Murah Bergaransi",
     description:
@@ -129,9 +129,9 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com",
+    canonical: "https://sedotwcmandala.com",
     languages: {
-      "id-ID": "https://sedotwc-jakarta.com",
+      "id-ID": "https://sedotwcmandala.com",
     },
   },
   category: "business",
@@ -142,14 +142,14 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://sedotwc-jakarta.com/#business",
+      "@id": "https://sedotwcmandala.com/#business",
       name: "SedotWC Jakarta",
       alternateName: ["Sedot WC Jakarta", "Jasa Sedot WC Jakarta", "Layanan Sedot WC Jakarta"],
       description:
         "Layanan sedot WC profesional terpercaya di Jakarta 24 jam dengan teknisi berpengalaman dan harga terjangkau",
-      url: "https://sedotwc-jakarta.com",
+      url: "https://sedotwcmandala.com",
       telephone: "+62812-1906-7233",
-      email: "info@sedotwc-jakarta.com",
+      email: "info@sedotwcmandala.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Jakarta",
@@ -239,19 +239,19 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://sedotwc-jakarta.com/#website",
-      url: "https://sedotwc-jakarta.com",
+      "@id": "https://sedotwcmandala.com/#website",
+      url: "https://sedotwcmandala.com",
       name: "SedotWC Jakarta",
       description: "Layanan sedot WC profesional terpercaya di Jakarta 24 jam",
       publisher: {
-        "@id": "https://sedotwc-jakarta.com/#business",
+        "@id": "https://sedotwcmandala.com/#business",
       },
       potentialAction: [
         {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
-            urlTemplate: "https://sedotwc-jakarta.com/search?q={search_term_string}",
+            urlTemplate: "https://sedotwcmandala.com/search?q={search_term_string}",
           },
           "query-input": "required name=search_term_string",
         },
@@ -259,12 +259,12 @@ const jsonLd = {
     },
     {
       "@type": "Organization",
-      "@id": "https://sedotwc-jakarta.com/#organization",
+      "@id": "https://sedotwcmandala.com/#organization",
       name: "SedotWC Jakarta",
-      url: "https://sedotwc-jakarta.com",
+      url: "https://sedotwcmandala.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://sedotwc-jakarta.com/logo.png",
+        url: "https://sedotwcmandala.com/logo.png",
         width: 300,
         height: 100,
       },
@@ -292,8 +292,8 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <head>
-        <link rel="canonical" href="https://sedotwc-jakarta.com" />
-        <link rel="alternate" hrefLang="id" href="https://sedotwc-jakarta.com" />
+        <link rel="canonical" href="https://sedotwcmandala.com" />
+        <link rel="alternate" hrefLang="id" href="https://sedotwcmandala.com" />
 
         {/* Geo tags */}
         <meta name="geo.region" content="ID-JK" />
@@ -366,7 +366,7 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://sedotwc-jakarta.com"
+                  "item": "https://sedotwcmandala.com"
                 }
               ]
             }

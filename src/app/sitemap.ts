@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sedotwc-jakarta.com'
+  const baseUrl = 'https://sedotwcmandala.com'
   
   const staticPages = [
     {

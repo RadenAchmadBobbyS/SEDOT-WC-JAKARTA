@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "⭐ Layanan Sedot WC Jakarta Selatan TERPERCAYA ⭐ Melayani semua kecamatan 24 jam. Harga mulai 150rb, Teknisi Profesional, Bergaransi.",
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwc-jakarta.com/jakarta-selatan",
+    url: "https://sedotwcmandala.com/jakarta-selatan",
     images: [
       {
         url: "/og-sedot-wc-jakarta-selatan.jpg",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://sedotwc-jakarta.com/jakarta-selatan",
+    canonical: "https://sedotwcmandala.com/jakarta-selatan",
   },
   robots: {
     index: true,
