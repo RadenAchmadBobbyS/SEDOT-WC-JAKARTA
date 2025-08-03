@@ -3,6 +3,63 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Prevent white screen and improve scroll performance */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Prevent white screen during scroll */
+  background-color: #ffffff;
+  min-height: 100vh;
+  /* Improve scroll performance */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Hardware acceleration for scroll animations */
+.will-change-transform {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Optimize animation performance */
+.animate-fade-in-up,
+.animate-fade-in-left,
+.animate-fade-in-right,
+.zoom-in,
+.slide-in-up {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Prevent layout shift during animations */
+.transition-all {
+  transition-property: transform, opacity, visibility;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Intersection observer fallback */
+@media (prefers-reduced-motion: reduce) {
+  .transition-all {
+    transition: none !important;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in-left,
+  .animate-fade-in-right,
+  .zoom-in,
+  .slide-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Mobile responsive fixes */
 @media (max-width: 768px) {
   .fixed {
@@ -168,7 +225,7 @@
   }
 }
 
-/* Performance optimizations */
+/* Performance optimizations for smooth animations */
 * {
   box-sizing: border-box;
 }
@@ -178,12 +235,40 @@ img {
   height: auto;
 }
 
-/* Smooth scrolling */
+/* Enhanced smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Loading animations */
+/* GPU acceleration for smoother animations */
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Will-change optimization for animated elements */
+.animate-optimized {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Smooth transition for all interactive elements */
+button,
+a,
+[role="button"] {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced focus styles for accessibility */
+.focus-smooth:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  transition: outline 0.2s ease;
+}
+
+/* Enhanced Loading animations with smooth effects */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -195,24 +280,100 @@ html {
   }
 }
 
-@keyframes slideInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes pulse {
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes smoothPulse {
   0%,
   100% {
     opacity: 1;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes cardHover {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes imageZoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }
 
@@ -236,24 +397,70 @@ html {
   }
 }
 
+/* Enhanced Animation Classes */
 .fade-in {
-  animation: fadeIn 0.6s ease-out;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s ease-out forwards;
 }
 
 .slide-in-up {
-  animation: slideInUp 0.8s ease-out;
+  animation: slideInUp 1s ease-out forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease-out forwards;
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-smooth-pulse {
+  animation: smoothPulse 3s ease-in-out infinite;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Staggered Animation Delays */
 .animation-delay-75 {
   animation-delay: 75ms;
 }
 
 .animation-delay-150 {
   animation-delay: 150ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
 }
 
 /* Custom scrollbar */
@@ -274,13 +481,87 @@ html {
   background: #a8a8a8;
 }
 
-/* Hover effects */
+/* Enhanced Hover Effects */
 .hover-lift {
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hover-lift:hover {
-  transform: translateY(-2px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hover-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-smooth:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  transform: scale(1.05);
+}
+
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1);
+}
+
+.hover-card:hover {
+  animation: cardHover 0.4s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+/* Image Hover Effects */
+.image-hover {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.image-hover img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-hover:hover img {
+  animation: imageZoom 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Button Enhancement */
+.btn-smooth {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.btn-smooth:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-smooth:active {
+  transform: translateY(0) scale(1.02);
+}
+
+/* Card Animations */
+.card-entry {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.card-smooth {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1);
+  backface-visibility: hidden;
+}
+
+.card-smooth:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 /* Critical CSS for above-the-fold content */
@@ -305,7 +586,7 @@ html {
   backface-visibility: hidden;
 }
 
-/* Reduce motion for accessibility */
+/* Reduce motion for accessibility with enhanced support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -315,6 +596,12 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  /* Ensure GPU-accelerated elements still work smoothly */
+  .animate-optimized {
+    transform: translateZ(0);
+    will-change: auto;
+  }
 }
 
 /* Focus styles for accessibility */
@@ -323,11 +610,11 @@ html {
   outline-offset: 2px;
 }
 
-/* Loading skeleton */
+/* Enhanced loading skeleton with smooth animation */
 .skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 200% 100%;
-  animation: loading 1.5s infinite;
+  animation: loading 2s ease-in-out infinite;
 }
 
 @keyframes loading {
@@ -336,6 +623,22 @@ html {
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+/* Shimmer effect for loading states */
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
   }
 }
 
@@ -413,27 +716,120 @@ html {
   animation: wiggle 2s ease-in-out infinite;
 }
 
-/* Responsive floating buttons */
+/* Responsive floating buttons with enhanced animations */
 @media (max-width: 768px) {
   .floating-buttons {
     bottom: 1rem;
     right: 1rem;
   }
+
+  /* Optimize animations for mobile */
+  .animate-optimized {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .card-smooth:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .btn-smooth:hover {
+    transform: translateY(-1px) scale(1.03);
+  }
 }
 
-/* Wave Animation for smooth transitions */
+/* Enhanced tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-smooth:hover {
+    transform: translateY(-6px) scale(1.015);
+  }
+
+  .image-hover:hover img {
+    transform: scale(1.08);
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 1025px) {
+  .card-smooth:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .image-hover:hover img {
+    transform: scale(1.1);
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}
+
+/* Enhanced Wave Animation for smooth transitions */
 @keyframes wave-motion {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-100%) scale(1);
   }
   50% {
-    transform: translateX(0%);
+    transform: translateX(0%) scale(1.05);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(100%) scale(1);
   }
 }
 
+@keyframes smoothBounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -15px, 0);
+  }
+  70% {
+    transform: translate3d(0, -8px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes smoothSlideIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes smoothSlideOut {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0) scale(0.95);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* Smooth wave animations */
 .animate-wave {
   animation: wave-motion 8s ease-in-out infinite;
 }
@@ -446,6 +842,79 @@ html {
   animation: wave-motion 10s ease-in-out infinite reverse;
 }
 
+.animate-smooth-bounce {
+  animation: smoothBounce 2s ease-in-out infinite;
+}
+
+.animate-smooth-slide-in {
+  animation: smoothSlideIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.animate-smooth-slide-out {
+  animation: smoothSlideOut 0.6s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Page transition animations */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+  }
+}
+
+.page-enter {
+  animation: pageEnter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+.page-exit {
+  animation: pageExit 0.4s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+/* Global page optimization */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Improve overall performance */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth scrolling enhancement */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+/* Focus enhancement for accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* Custom height classes for gallery */
 .h-88 {
   height: 22rem; /* 352px */
@@ -453,4 +922,141 @@ html {
 
 .h-96 {
   height: 24rem; /* 384px */
+}
+
+/* Scroll Reveal Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 0.7s ease-out forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 0.7s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.7s ease-out forwards;
+}
+
+/* Page Load Animations */
+.page-enter {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Smooth reveal utility classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image smooth loading */
+.image-smooth {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+}
+
+.image-smooth.loaded {
+  opacity: 1;
+}
+
+/* Card reveal animations */
+.card-reveal {
+  opacity: 0;
+  transform: translateY(2rem) scale(0.95);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Text reveal animations */
+.text-reveal {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

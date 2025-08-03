@@ -9,10 +9,13 @@ export function FloatingActionButtons() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Simple timer to show FAB after page load
+    // Reset visibility when pathname changes
+    setIsVisible(false);
+    
+    // Simple timer to show FAB after page load - delay longer than FloatingNav
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -22,13 +25,13 @@ export function FloatingActionButtons() {
   }
 
   return (
-    <div className="fixed bottom-6 right-4 z-[60] flex flex-col gap-3" data-floating-element="fab">
+    <div className="fixed bottom-6 right-4 z-[50] flex flex-col gap-3 animate-fade-in-up" data-floating-element="fab">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Jakarta"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group block"
+        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl btn-smooth group block animate-gentle-float animate-optimized"
         aria-label="Hubungi via WhatsApp"
       >
         <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +42,7 @@ export function FloatingActionButtons() {
       {/* Phone Button */}
       <a
         href="tel:+6281219067233"
-        className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group block"
+        className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-2xl btn-smooth group block animate-gentle-float animation-delay-150 animate-optimized"
         aria-label="Telepon langsung"
       >
         <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />

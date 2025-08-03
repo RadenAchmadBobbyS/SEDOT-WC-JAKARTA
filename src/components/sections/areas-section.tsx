@@ -79,15 +79,15 @@ export function AreasSection() {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 bg-white hover:bg-gray-50 shadow-xl rounded-full p-3 lg:p-4 transition-all duration-300 hover:scale-110 z-20 border border-gray-200"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 bg-white hover:bg-gray-50 shadow-xl rounded-full p-3 lg:p-4 btn-smooth hover:scale-110 z-20 border border-gray-200"
           >
-            <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6 text-gray-700" />
+            <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6 text-gray-700 transition-transform duration-300" />
           </button>
           <button
             onClick={goToNextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 bg-white hover:bg-gray-50 shadow-xl rounded-full p-3 lg:p-4 transition-all duration-300 hover:scale-110 z-20 border border-gray-200"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 bg-white hover:bg-gray-50 shadow-xl rounded-full p-3 lg:p-4 btn-smooth hover:scale-110 z-20 border border-gray-200"
           >
-            <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6 text-gray-700" />
+            <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6 text-gray-700 transition-transform duration-300" />
           </button>
 
           {/* Slider Content */}
@@ -103,37 +103,37 @@ export function AreasSection() {
                   return (
                     <div key={index} className="w-full flex-shrink-0 px-4">
                       <div 
-                        className={`${colors.bg} ${colors.border} border-2 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 max-w-md mx-auto`}
+                        className={`${colors.bg} ${colors.border} border-2 rounded-2xl p-6 card-smooth hover-card max-w-md mx-auto animate-optimized`}
                       >
                         {/* Icon */}
-                        <div className={`${colors.icon} mb-4`}>
-                          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm">
-                            <span className="text-2xl">🏢</span>
+                        <div className={`${colors.icon} mb-4 transition-transform duration-300 hover:scale-110`}>
+                          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm transition-all duration-300 hover:shadow-lg">
+                            <span className="text-2xl transition-transform duration-300 hover:scale-110">🏢</span>
                           </div>
                         </div>
 
                         {/* Area Name */}
-                        <h3 className="text-xl font-black mb-2 text-gray-800">
+                        <h3 className="text-xl font-black mb-2 text-gray-800 transition-colors duration-300">
                           {area.name}
                         </h3>
                         
                         {/* Response Time */}
-                        <p className="text-sm text-gray-600 mb-3 font-semibold">
+                        <p className="text-sm text-gray-600 mb-3 font-semibold transition-colors duration-300">
                           Respon: 30-45 menit
                         </p>
 
                         {/* Description */}
-                        <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                        <p className="text-sm text-gray-700 mb-4 leading-relaxed transition-colors duration-300">
                           {area.description}
                         </p>
 
                         {/* Stats */}
                         <div className="flex items-center gap-4 mb-4 text-xs text-gray-600">
-                          <div className="flex items-center gap-1">
+                          <div className="flex items-center gap-1 transition-all duration-300 hover:scale-105">
                             <span>📍</span>
                             <span className="font-semibold">10 Kecamatan</span>
                           </div>
-                          <div className="flex items-center gap-1">
+                          <div className="flex items-center gap-1 transition-all duration-300 hover:scale-105">
                             <span>🕐</span>
                             <span className="font-semibold">24/7 Available</span>
                           </div>
@@ -143,13 +143,13 @@ export function AreasSection() {
                         <div className="flex items-center justify-between gap-3">
                           <a 
                             href={`tel:+6281234567890`}
-                            className="bg-gray-800 hover:bg-gray-700 text-white font-black p-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center"
+                            className="bg-gray-800 hover:bg-gray-700 text-white font-black p-3 rounded-lg btn-smooth flex items-center justify-center"
                           >
-                            <Phone className="h-4 w-4 text-blue-400" />
+                            <Phone className="h-4 w-4 text-blue-400 transition-colors duration-300" />
                           </a>
                           <a 
                             href={`/area/${area.slug}`}
-                            className={`flex-1 bg-gradient-to-r ${colors.button} text-white font-black py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center text-sm`}
+                            className={`flex-1 bg-gradient-to-r ${colors.button} text-white font-black py-3 px-4 rounded-lg btn-smooth text-center text-sm`}
                           >
                             Lihat Detail Area
                           </a>
@@ -244,10 +244,10 @@ export function AreasSection() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-500 btn-smooth ${
                   currentSlide === index 
-                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
+                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-500/50 scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'
                 }`}
               />
             ))}

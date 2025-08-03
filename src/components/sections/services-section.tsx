@@ -96,61 +96,61 @@ export function ServicesSection() {
             <div className="overflow-visible">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-5 px-4 sm:px-6 lg:px-8">
                 {/* Operational Area */}
-                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group hover:scale-105 transition-all duration-300 rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.5),0_6px_12px_-3px_rgba(0,0,0,0.3)]">
+                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group card-smooth hover-card rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_25px_50px_-12px_rgba(249,129,37,0.4),0_12px_24px_-6px_rgba(249,129,37,0.3)] animate-optimized">
                   <CardContent className="p-4 sm:p-6 lg:p-8 text-center relative h-full flex flex-col justify-end">
                     {/* 3D Isometric Platform */}
-                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52">
-                      <div className="relative w-full h-full">
+                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52 animate-gentle-float">
+                      <div className="relative w-full h-full gpu-accelerate">
                         {/* Isometric base platform - LAYER 1 */}
-                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(59,130,246,0.4)]"></div>
                         {/* Isometric base platform - LAYER 2 */}
-                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-pink-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-pink-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(249,129,37,0.4)]"></div>
                       </div>
                     </div>
                     
-                    <div className="mt-auto py-4 sm:py-6 lg:py-13">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">Area Operasional</h3>
-                      <p className="text-gray-100 font-medium text-sm sm:text-base">Operasional di seluruh Jakarta dan sekitarnya</p>
+                    <div className="mt-auto py-4 sm:py-6 lg:py-13 animate-optimized">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2 transition-all duration-300 group-hover:scale-105">Area Operasional</h3>
+                      <p className="text-gray-100 font-medium text-sm sm:text-base transition-all duration-300 group-hover:text-white">Operasional di seluruh Jakarta dan sekitarnya</p>
                     </div>
                   </CardContent>
                 </Card>
 
                 {/* Driver Partners */}
-                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group hover:scale-105 transition-all duration-300 rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.5),0_6px_12px_-3px_rgba(0,0,0,0.3)]">
+                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group card-smooth hover-card rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_25px_50px_-12px_rgba(249,129,37,0.4),0_12px_24px_-6px_rgba(249,129,37,0.3)] animate-optimized animation-delay-150">
                   <CardContent className="p-4 sm:p-6 lg:p-8 text-center relative h-full flex flex-col justify-end">
                     {/* 3D Isometric Platform */}
-                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52">
-                      <div className="relative w-full h-full">
+                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52 animate-gentle-float animation-delay-300">
+                      <div className="relative w-full h-full gpu-accelerate">
                         {/* Isometric base platform - LAYER 1 */}
-                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-orange-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-orange-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(59,130,246,0.4)]"></div>
                         {/* Isometric base platform - LAYER 2 */}
-                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(249,129,37,0.4)]"></div>
                       </div>
                     </div>
                     
-                    <div className="mt-auto py-4 sm:py-6 lg:py-13">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">5,000+</h3>
-                      <p className="text-gray-100 font-medium text-sm sm:text-base">Pelanggan yang telah dilayani</p>
+                    <div className="mt-auto py-4 sm:py-6 lg:py-13 animate-optimized">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2 transition-all duration-300 group-hover:scale-105">5,000+</h3>
+                      <p className="text-gray-100 font-medium text-sm sm:text-base transition-all duration-300 group-hover:text-white">Pelanggan yang telah dilayani</p>
                     </div>
                   </CardContent>
                 </Card>
 
                 {/* Merchants */}
-                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group hover:scale-105 transition-all duration-300 rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.5),0_6px_12px_-3px_rgba(0,0,0,0.3)]">
+                <Card className="bg-gradient-to-r from-[#f98125] to-orange-400 border-0 overflow-visible group card-smooth hover-card rounded-3xl relative h-72 sm:h-80 shadow-[0_8px_16px_-4px_rgba(0,0,0,0.4),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:shadow-[0_25px_50px_-12px_rgba(249,129,37,0.4),0_12px_24px_-6px_rgba(249,129,37,0.3)] animate-optimized animation-delay-300">
                   <CardContent className="p-4 sm:p-6 lg:p-8 text-center relative h-full flex flex-col justify-end">
                     {/* 3D Isometric Platform */}
-                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52">
-                      <div className="relative w-full h-full">
+                    <div className="absolute -top-20 sm:-top-24 lg:-top-28 left-1/2 transform -translate-x-1/2 w-48 sm:w-56 lg:w-64 h-40 sm:h-46 lg:h-52 animate-gentle-float animation-delay-500">
+                      <div className="relative w-full h-full gpu-accelerate">
                         {/* Isometric base platform - LAYER 1 */}
-                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-green-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-12 sm:bottom-14 lg:bottom-16 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 transform skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-green-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(59,130,246,0.4)]"></div>
                         {/* Isometric base platform - LAYER 2 */}
-                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2"></div>
+                        <div className="absolute bottom-15 sm:bottom-17 lg:bottom-20 w-full h-20 sm:h-24 lg:h-28 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 transform -skew-y-12 rounded-xl lg:rounded-2xl shadow-[0_6px_12px_-2px_rgba(0,0,0,0.3)] border border-blue-300/30 lg:border-2 transition-all duration-500 group-hover:shadow-[0_12px_24px_-4px_rgba(249,129,37,0.4)]"></div>
                       </div>
                     </div>
                     
-                    <div className="mt-auto py-4 sm:py-6 lg:py-13">
-                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2">9+ Tahun</h3>
-                      <p className="text-gray-100 font-medium text-sm sm:text-base">Pengalaman melayani Jakarta</p>
+                    <div className="mt-auto py-4 sm:py-6 lg:py-13 animate-optimized">
+                      <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-2 transition-all duration-300 group-hover:scale-105">9+ Tahun</h3>
+                      <p className="text-gray-100 font-medium text-sm sm:text-base transition-all duration-300 group-hover:text-white">Pengalaman melayani Jakarta</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -176,15 +176,15 @@ export function ServicesSection() {
                 {/* Navigation Arrows */}
                 <button
                   onClick={() => setCurrentServiceSlide(currentServiceSlide > 0 ? currentServiceSlide - 1 : services.length - 1)}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110 z-10"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 btn-smooth hover:scale-110 z-10 border border-gray-200/50"
                 >
-                  <ChevronLeft className="h-6 w-6 text-gray-600" />
+                  <ChevronLeft className="h-6 w-6 text-gray-600 transition-transform duration-300 group-hover:scale-110" />
                 </button>
                 <button
                   onClick={() => setCurrentServiceSlide(currentServiceSlide < services.length - 1 ? currentServiceSlide + 1 : 0)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 transition-all duration-300 hover:scale-110 z-10"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-lg rounded-full p-3 btn-smooth hover:scale-110 z-10 border border-gray-200/50"
                 >
-                  <ChevronRight className="h-6 w-6 text-gray-600" />
+                  <ChevronRight className="h-6 w-6 text-gray-600 transition-transform duration-300 group-hover:scale-110" />
                 </button>
 
                 {/* Single Card Container */}
@@ -200,13 +200,13 @@ export function ServicesSection() {
                   >
                     {services.map((service, index) => (
                       <div key={index} className="w-full flex-shrink-0 px-4">
-                        <Card className="group bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm border border-gray-200 hover:border-blue-300 hover:from-blue-50 hover:to-white transition-all duration-500 hover:-translate-y-3 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.25)]">
+                        <Card className="group bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm border border-gray-200 hover:border-blue-300 hover:from-blue-50 hover:to-white card-smooth hover-card shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.25)] animate-optimized">
                           <CardContent className="p-6 text-center relative overflow-hidden h-full flex flex-col">
-                            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-100 to-transparent rounded-bl-[3rem] opacity-50"></div>
+                            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-100 to-transparent rounded-bl-[3rem] opacity-50 transition-opacity duration-500 group-hover:opacity-80"></div>
                             
                             <div className="relative z-10 flex-grow flex flex-col">
-                              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/25">
-                                <service.icon className="h-10 w-10 text-white" />
+                              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:shadow-blue-500/25 animate-optimized">
+                                <service.icon className="h-10 w-10 text-white transition-transform duration-300 group-hover:scale-110" />
                               </div>
                               
                               <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300 leading-tight">
@@ -230,10 +230,10 @@ export function ServicesSection() {
                     <button
                       key={index}
                       onClick={() => setCurrentServiceSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-3 h-3 rounded-full transition-all duration-500 btn-smooth ${
                         currentServiceSlide === index 
-                          ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg' 
-                          : 'bg-gradient-to-r from-gray-400 to-gray-500'
+                          ? 'bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg shadow-blue-500/50 scale-125' 
+                          : 'bg-gradient-to-r from-gray-400 to-gray-500 hover:from-gray-500 hover:to-gray-600 hover:scale-110'
                       }`}
                     />
                   ))}
@@ -277,13 +277,13 @@ export function ServicesSection() {
                           {services
                             .slice(slideIndex * 3, slideIndex * 3 + 3)
                             .map((service, index) => (
-                              <Card key={`${slideIndex}-${index}`} className="group bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm border border-gray-200 hover:border-blue-300 hover:from-blue-50 hover:to-white transition-all duration-500 hover:-translate-y-3 shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.25)]">
+                              <Card key={`${slideIndex}-${index}`} className="group bg-gradient-to-br from-white to-gray-50 backdrop-blur-sm border border-gray-200 hover:border-blue-300 hover:from-blue-50 hover:to-white card-smooth hover-card shadow-[0_8px_20px_-4px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.25)] animate-optimized">
                                 <CardContent className="p-6 text-center relative overflow-hidden h-full flex flex-col">
-                                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-100 to-transparent rounded-bl-[3rem] opacity-50"></div>
+                                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-100 to-transparent rounded-bl-[3rem] opacity-50 transition-opacity duration-500 group-hover:opacity-80"></div>
                                   
                                   <div className="relative z-10 flex-grow flex flex-col">
-                                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg group-hover:shadow-blue-500/25">
-                                      <service.icon className="h-10 w-10 text-white" />
+                                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg group-hover:shadow-blue-500/25 animate-optimized">
+                                      <service.icon className="h-10 w-10 text-white transition-transform duration-300 group-hover:scale-110" />
                                     </div>
                                     
                                     <h4 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300 leading-tight">

@@ -36,67 +36,68 @@ export default function LoadingScreen() {
   const CurrentIcon = steps[currentStep].icon
 
   return (
-    <div className="fixed inset-0 bg-orange-300 flex items-center justify-center z-[9999]" data-loading-screen>
+    <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 flex items-center justify-center z-[9999] animate-optimized" data-loading-screen>
       <div className="text-center space-y-8 px-6">
         {/* Logo */}
-        <div className="flex items-center justify-center space-x-3 mb-8">
-          <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-2xl shadow-2xl">
+        <div className="flex items-center justify-center space-x-3 mb-8 animate-fade-in-up">
+          <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-2xl shadow-2xl animate-gentle-float">
             <Truck className="h-10 w-10 text-white" />
           </div>
           <div className="text-left">
-            <h1 className="text-2xl font-bold text-black">SedotWC Jakarta</h1>
-            <p className="text-gray-900 text-sm">Layanan Terpercaya 24 Jam</p>
+            <h1 className="text-2xl font-bold text-gray-800 animate-fade-in-up animation-delay-150">SedotWC Jakarta</h1>
+            <p className="text-gray-600 text-sm animate-fade-in-up animation-delay-200">Layanan Terpercaya 24 Jam</p>
           </div>
         </div>
 
         {/* Animated Icon */}
-        <div className="relative">
-          <div className="w-24 h-24 mx-auto bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 animate-pulse">
-            <CurrentIcon className={`h-12 w-12 ${steps[currentStep].color} animate-pulse`} />
+        <div className="relative animate-fade-in-up animation-delay-300">
+          <div className="w-24 h-24 mx-auto bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 animate-smooth-pulse shadow-lg">
+            <CurrentIcon className={`h-12 w-12 ${steps[currentStep].color} transition-all duration-500`} />
           </div>
 
-          {/* Ripple Effect */}
-          <div className="absolute inset-0 w-24 h-24 mx-auto rounded-full border-2 border-blue-400/70 animate-ping"></div>
-          <div className="absolute inset-2 w-20 h-20 mx-auto rounded-full border-2 border-blue-400/60 animate-ping animation-delay-75"></div>
+          {/* Enhanced Ripple Effect */}
+          <div className="absolute inset-0 w-24 h-24 mx-auto rounded-full border-2 border-blue-400/50 animate-ping"></div>
+          <div className="absolute inset-2 w-20 h-20 mx-auto rounded-full border-2 border-blue-400/40 animate-ping animation-delay-75"></div>
+          <div className="absolute inset-4 w-16 h-16 mx-auto rounded-full border-2 border-blue-400/30 animate-ping animation-delay-150"></div>
         </div>
 
         {/* Loading Text */}
-        <div className="space-y-4">
-          <p className="text-xl font-semibold text-black animate-fade-in">{steps[currentStep].text}</p>
+        <div className="space-y-4 animate-fade-in-up animation-delay-400">
+          <p className="text-xl font-semibold text-gray-800 transition-all duration-500">{steps[currentStep].text}</p>
 
-          {/* Progress Bar */}
+          {/* Enhanced Progress Bar */}
           <div className="w-80 max-w-full mx-auto">
-            <div className="bg-white/20 rounded-full h-3 overflow-hidden backdrop-blur-sm">
+            <div className="bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
               <div
-                className="bg-gradient-to-r from-blue-400 to-blue-500 h-full rounded-full transition-all duration-300 ease-out relative"
+                className="bg-gradient-to-r from-blue-500 to-orange-500 h-full rounded-full transition-all duration-500 ease-out relative animate-glow-pulse"
                 style={{ width: `${progress}%` }}
               >
-                <div className="absolute inset-0 bg-orange-300 animate-pulse rounded-full"></div>
+                <div className="absolute inset-0 bg-white/20 animate-shimmer rounded-full"></div>
               </div>
             </div>
-            <p className="text-black text-sm mt-2 font-medium">{progress}%</p>
+            <p className="text-gray-600 text-sm mt-2 font-medium transition-all duration-300">{progress}%</p>
           </div>
         </div>
 
-        {/* Features Preview */}
-        <div className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto">
-          <div className="text-center space-y-2 opacity-80">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mx-auto">
+        {/* Enhanced Features Preview */}
+        <div className="grid grid-cols-3 gap-4 mt-8 max-w-md mx-auto animate-fade-in-up animation-delay-500">
+          <div className="text-center space-y-2 transition-all duration-300 hover:scale-105">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto shadow-lg animate-gentle-float">
               <CheckCircle className="h-4 w-4 text-white" />
             </div>
-            <p className="text-xs text-black font-medium">24 Jam</p>
+            <p className="text-xs text-gray-700 font-medium">24 Jam</p>
           </div>
-          <div className="text-center space-y-2 opacity-80">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mx-auto">
+          <div className="text-center space-y-2 transition-all duration-300 hover:scale-105">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto shadow-lg animate-gentle-float animation-delay-200">
               <CheckCircle className="h-4 w-4 text-white" />
             </div>
-            <p className="text-xs text-black font-medium">Bergaransi</p>
+            <p className="text-xs text-gray-700 font-medium">Bergaransi</p>
           </div>
-          <div className="text-center space-y-2 opacity-80">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center mx-auto">
+          <div className="text-center space-y-2 transition-all duration-300 hover:scale-105">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto shadow-lg animate-gentle-float animation-delay-400">
               <CheckCircle className="h-4 w-4 text-white" />
             </div>
-            <p className="text-xs text-black font-medium">Profesional</p>
+            <p className="text-xs text-gray-700 font-medium">Profesional</p>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Camera, MapPin, Clock, CheckCircle, ArrowLeft } from "lucide-react"
+import { SmoothReveal } from "@/components/SmoothReveal"
 
 export const metadata: Metadata = {
   title: "Gallery Layanan Sedot WC Jakarta | Dokumentasi Pekerjaan Profesional",
@@ -207,7 +208,8 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Header Section */}
-      <section className="pt-24 pb-12 bg-gradient-to-r from-blue-600 to-blue-800">
+      <SmoothReveal>
+        <section className="pt-24 pb-12 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="container mx-auto px-6 lg:px-8 xl:px-12">
           {/* Back Button */}
           <div className="mb-8">
@@ -251,9 +253,11 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+      </SmoothReveal>
 
       {/* Filter Categories */}
-      <section className="py-8 bg-white border-b">
+      <SmoothReveal delay={200}>
+        <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-6 lg:px-8 xl:px-12">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
@@ -272,50 +276,47 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+      </SmoothReveal>
 
       {/* Gallery Grid */}
-      <section className="py-16">
+      <SmoothReveal delay={400}>
+        <section className="py-16">
         <div className="container mx-auto px-6 lg:px-8 xl:px-12">
           {/* Clean Organized Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
-              <div
-                key={image.id}
-                className={`group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] aspect-square rounded-lg bg-white ${
-                  index % 3 === 0
-                    ? "animate-fade-in"
-                    : index % 3 === 1
-                      ? "animate-fade-in animation-delay-150"
-                      : "animate-fade-in animation-delay-300"
-                }`}
-              >
-                <div className="relative w-full h-full overflow-hidden rounded-lg">
-                  <Image
-                    src={image.src || "/placeholder.svg"}
-                    alt={image.alt}
-                    fill
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700"
-                    loading={index < 6 ? "eager" : "lazy"}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    style={{ objectFit: 'cover' }}
-                  />
+              <SmoothReveal key={image.id} delay={index * 100} animation="scaleIn">
+                <div
+                  className="group cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-2xl card-smooth hover-card aspect-square rounded-lg bg-white image-hover animate-optimized"
+                >
+                  <div className="relative w-full h-full overflow-hidden rounded-lg gpu-accelerate">
+                    <Image
+                      src={image.src || "/placeholder.svg"}
+                      alt={image.alt}
+                      fill
+                      className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-110 animate-optimized"
+                      loading={index < 6 ? "eager" : "lazy"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                      style={{ objectFit: 'cover' }}
+                    />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                      <div className="flex items-center justify-between mb-2">
-                        <Badge className="bg-blue-600 text-white text-xs">{image.category}</Badge>
-                        <div className="flex items-center space-x-1 text-sm">
-                          <MapPin className="h-3 w-3" />
-                          <span>{image.location}</span>
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <div className="flex items-center justify-between mb-2">
+                          <Badge className="bg-blue-600 text-white text-xs">{image.category}</Badge>
+                          <div className="flex items-center space-x-1 text-sm">
+                            <MapPin className="h-3 w-3" />
+                            <span>{image.location}</span>
+                          </div>
                         </div>
+                        <h3 className="font-bold text-lg mb-1">{image.title}</h3>
+                        <p className="text-sm text-gray-200 leading-relaxed">{image.description}</p>
                       </div>
-                      <h3 className="font-bold text-lg mb-1">{image.title}</h3>
-                      <p className="text-sm text-gray-200 leading-relaxed">{image.description}</p>
                     </div>
                   </div>
                 </div>
-              </div>
+              </SmoothReveal>
             ))}
           </div>
 
@@ -327,9 +328,11 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+      </SmoothReveal>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
+      <SmoothReveal delay={600}>
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="container mx-auto px-6 lg:px-8 xl:px-12 text-center">
           <div className="max-w-3xl mx-auto text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Butuh Layanan Sedot WC Profesional?</h2>
@@ -353,6 +356,7 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+      </SmoothReveal>
 
       {/* Schema Markup */}
       <script

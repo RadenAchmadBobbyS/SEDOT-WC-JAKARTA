@@ -16,10 +16,10 @@ export function FloatingNav() {
     setIsVisible(false);
     setIsOpen(false); // Close dropdown when navigating
     
-    // Simple timer to show floating nav after page load
+    // Simple timer to show floating nav after page load - sync with FloatingActionButtons
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 1500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -34,22 +34,23 @@ export function FloatingNav() {
   }
 
   return (
-    <div className="fixed bottom-32 right-4 z-[60] sm:bottom-32 sm:right-4" data-floating-element="nav">
+    <div className="fixed bottom-33 right-4 z-[60] sm:bottom-32 sm:right-4 animate-fade-in-up" data-floating-element="nav">
       {/* Floating Navigation Button */}
       <button
         onClick={toggleDropdown}
-        className="w-12 h-12 rounded-full shadow-lg transition-all duration-200 flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700"
+        className="w-12 h-12 rounded-full shadow-lg transition-all duration-200 flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 btn-smooth animate-gentle-float animate-optimized"
       >
         <MapPin className="h-5 w-5 text-white" />
       </button>
 
       {/* Area Dropdown */}
       {isOpen && (
-        <div className="absolute bottom-14 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 py-4 animate-in slide-in-from-bottom-2 duration-200">
+        <div className="absolute bottom-14 right-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 py-4 animate-in slide-in-from-bottom-2 duration-200 animate-fade-in-up"
+             style={{ animationDelay: '0ms' }}>
           {/* Close Button - Inside menu at top right */}
           <button
             onClick={() => setIsOpen(false)}
-            className="absolute top-3 right-3 w-5 h-5 rounded-full bg-gray-100 hover:bg-red-100 transition-colors duration-200 flex items-center justify-center group"
+            className="absolute top-3 right-3 w-5 h-5 rounded-full bg-gray-100 hover:bg-red-100 transition-colors duration-200 flex items-center justify-center group btn-smooth"
           >
             <X className="h-4 w-4 text-gray-600 group-hover:text-red-600" />
           </button>
@@ -67,10 +68,11 @@ export function FloatingNav() {
                 key={area.slug}
                 href={`/area/${area.slug}`}
                 onClick={() => setIsOpen(false)}
-                className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors group"
+                className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors group btn-smooth animate-optimized"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 ${
-                  index % 2 === 0 ? 'bg-blue-100 text-blue-600' : 'bg-orange-100 text-orange-600'
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center mr-3 transition-all duration-300 group-hover:scale-110 animate-optimized ${
+                  index % 2 === 0 ? 'bg-blue-100 text-blue-600 group-hover:bg-blue-200' : 'bg-orange-100 text-orange-600 group-hover:bg-orange-200'
                 }`}>
                   🏢
                 </div>
@@ -82,7 +84,7 @@ export function FloatingNav() {
                     Respon 30-45 menit
                   </div>
                 </div>
-                <div className="text-green-500 text-xs font-semibold">
+                <div className="text-green-500 text-xs font-semibold transition-all duration-300 group-hover:text-green-600 group-hover:scale-110 animate-optimized">
                   24/7
                 </div>
               </Link>

@@ -44,7 +44,7 @@ export function WhyChooseUsSection() {
             return (
               <div key={index} className="text-center group">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                  <Icon className="h-10 w-10 text-black" />
+                  <Icon className="h-10 w-10 text-black" strokeWidth={2} />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-black">{feature.title}</h3>
                 <p className="text-gray-900 font-medium">{feature.description}</p>

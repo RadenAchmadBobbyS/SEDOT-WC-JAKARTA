@@ -41,11 +41,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-2 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
-              <Truck className="h-7 w-7 text-white" />
+            <div className="bg-gradient-to-br from-orange-400 to-orange-500 p-2 rounded-xl shadow-lg group-hover:shadow-xl btn-smooth">
+              <Truck className="h-7 w-7 text-white transition-transform duration-300 group-hover:scale-110" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-orange-400 transition-colors">
+              <h1 className="text-xl font-bold text-orange-400 transition-colors duration-300 group-hover:text-orange-500">
                 Sedot WC Mandala
               </h1>
               <p className="text-xs text-gray-900 font-medium">Layanan Terpercaya</p>

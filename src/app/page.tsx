@@ -73,21 +73,21 @@ export default function HomePage() {
 
         {/* Contact Section */}
         <section className="py-8 sm:py-12 lg:py-24 bg-gradient-to-br from-orange-400 via-orange-300 to-orange-300 contact-section">
-          <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-            <div className="text-center mb-6 sm:mb-8 lg:mb-12 px-2">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-3 lg:mb-4 mobile-text-wrap">
-                Hubungi Kami Sekarang
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-800 max-w-2xl mx-auto mobile-text-wrap">
-                Konsultasi gratis dan dapatkan penawaran terbaik untuk kebutuhan sedot WC Anda
-              </p>
-            </div>
-            
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-start">
-              {/* Left Side - Contact Information */}
-              <div className="order-2 lg:order-1 w-full">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 xl:p-8 border border-white/20 w-full">
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4 lg:mb-6 mobile-text-wrap">Informasi Kontak</h3>
+        <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12 px-2">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-3 lg:mb-4 mobile-text-wrap">
+              Hubungi Kami Sekarang
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-800 max-w-2xl mx-auto mobile-text-wrap">
+              Konsultasi gratis dan dapatkan penawaran terbaik untuk kebutuhan sedot WC Anda
+            </p>
+          </div>
+          
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-start">
+            {/* Left Side - Contact Information */}
+            <div className="order-2 lg:order-1 w-full">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 xl:p-8 border border-white/20 w-full">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4 lg:mb-6 mobile-text-wrap">Informasi Kontak</h3>
                   
                   <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                     {/* Telepon/WhatsApp */}
@@ -153,29 +153,29 @@ export default function HomePage() {
                 </div>
               </div>
               
-              {/* Right Side - Contact Form */}
-              <div className="order-1 lg:order-2 w-full">
-                <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96 rounded-lg"></div>}>
-                  <ContactForm />
-                </Suspense>
-              </div>
+            {/* Right Side - Contact Form */}
+            <div className="order-1 lg:order-2 w-full">
+              <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96 rounded-lg"></div>}>
+                <ContactForm />
+              </Suspense>
             </div>
           </div>
+        </div>
         </section>
 
         {/* Footer */}
         <footer className="bg-white text-black py-8 sm:py-12">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              <div className="text-center sm:text-left">
-                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Jasa Sedot WC Jakarta</h3>
-                <p className="text-gray-600 mb-4 text-sm sm:text-base">
-                  Layanan sedot WC terpercaya dengan pengalaman 9+ tahun melayani masyarakat Jakarta.
-                </p>
-              </div>
-              
-              <div className="text-center sm:text-left">
-                <h4 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Area Layanan</h4>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="text-center sm:text-left">
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Jasa Sedot WC Jakarta</h3>
+              <p className="text-gray-600 mb-4 text-sm sm:text-base">
+                Layanan sedot WC terpercaya dengan pengalaman 9+ tahun melayani masyarakat Jakarta.
+              </p>
+            </div>
+            
+            <div className="text-center sm:text-left">
+              <h4 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Area Layanan</h4>
                 <ul className="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
                   <li>Jakarta Selatan</li>
                   <li>Jakarta Barat</li>
@@ -195,10 +195,10 @@ export default function HomePage() {
               </div>
             </div>
             
-            <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-600">
-              <p className="text-sm sm:text-base">&copy; 2024 Jasa Sedot WC Jakarta. All rights reserved.</p>
-            </div>
+          <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-600">
+            <p className="text-sm sm:text-base">&copy; 2024 Jasa Sedot WC Jakarta. All rights reserved.</p>
           </div>
+        </div>
         </footer>
       </div>
     </PageLoader>
