@@ -193,13 +193,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="block lg:hidden">
             
             {/* Hamburger Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="p-2 text-black hover:text-white hover:bg-orange-500 transition-all duration-300 rounded-xl group">
-                  <Grip className="h-30 w-30 group-hover:scale-110 transition-transform duration-300" />
+                <Button variant="ghost" size="sm" className="p-3 text-black hover:text-white hover:bg-orange-500 transition-all duration-300 rounded-xl group">
+                  <Grip className="h-6 w-6 group-hover:scale-110 transition-transform duration-300" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>

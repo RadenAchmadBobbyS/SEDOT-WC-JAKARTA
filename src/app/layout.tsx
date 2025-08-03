@@ -148,7 +148,7 @@ const jsonLd = {
       description:
         "Layanan sedot WC profesional terpercaya di Jakarta 24 jam dengan teknisi berpengalaman dan harga terjangkau",
       url: "https://sedotwc-jakarta.com",
-      telephone: "+62812-3456-7890",
+      telephone: "+62812-1906-7233",
       email: "info@sedotwc-jakarta.com",
       address: {
         "@type": "PostalAddress",

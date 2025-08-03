@@ -72,84 +72,89 @@ export default function HomePage() {
         </Suspense>
 
         {/* Contact Section */}
-        <section className="py-24 bg-gradient-to-br from-orange-400 via-orange-300 to-orange-300">
-          <div className="container mx-auto px-6 lg:px-8 xl:px-12">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        <section className="py-8 sm:py-12 lg:py-24 bg-gradient-to-br from-orange-400 via-orange-300 to-orange-300 contact-section">
+          <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+            <div className="text-center mb-6 sm:mb-8 lg:mb-12 px-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-2 sm:mb-3 lg:mb-4 mobile-text-wrap">
                 Hubungi Kami Sekarang
               </h2>
-              <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-800 max-w-2xl mx-auto mobile-text-wrap">
                 Konsultasi gratis dan dapatkan penawaran terbaik untuk kebutuhan sedot WC Anda
               </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-start">
               {/* Left Side - Contact Information */}
-              <div className="space-y-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold text-black mb-6">Informasi Kontak</h3>
+              <div className="order-2 lg:order-1 w-full">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-3 sm:p-4 lg:p-6 xl:p-8 border border-white/20 w-full">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4 lg:mb-6 mobile-text-wrap">Informasi Kontak</h3>
                   
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📞</span>
+                  <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                    {/* Telepon/WhatsApp */}
+                    <div className="flex items-start space-x-2 sm:space-x-3 lg:space-x-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-lg sm:text-xl lg:text-2xl">📞</span>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-black">Telepon/WhatsApp</h4>
-                        <p className="text-lg font-bold text-black">0812-1906-7233</p>
-                        <p className="text-sm text-gray-700">24 Jam Siaga</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📧</span>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-black">Email</h4>
-                        <p className="text-lg text-black">info@sedotwcjakarta.com</p>
-                        <p className="text-sm text-gray-700">Respon dalam 1 jam</p>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Telepon/WhatsApp</h4>
+                        <p className="text-sm sm:text-base lg:text-lg font-bold text-black mobile-text-wrap">0812-1906-7233</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">24 Jam Siaga</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">🕒</span>
+                    {/* Email */}
+                    <div className="flex items-start space-x-2 sm:space-x-3 lg:space-x-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-lg sm:text-xl lg:text-2xl">📧</span>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-black">Jam Operasional</h4>
-                        <p className="text-lg text-black">24 Jam</p>
-                        <p className="text-sm text-gray-700">Setiap hari termasuk hari libur</p>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Email</h4>
+                        <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">info@sedotwcjakarta.com</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Respon dalam 1 jam</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                        <span className="text-2xl">📍</span>
+                    {/* Jam Operasional */}
+                    <div className="flex items-start space-x-2 sm:space-x-3 lg:space-x-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-lg sm:text-xl lg:text-2xl">🕒</span>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-black">Area Layanan</h4>
-                        <p className="text-lg text-black">Seluruh Jakarta</p>
-                        <p className="text-sm text-gray-700">Jakarta Selatan, Barat, Timur, Utara, Pusat</p>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Jam Operasional</h4>
+                        <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">24 Jam</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Setiap hari termasuk hari libur</p>
+                      </div>
+                    </div>
+                    
+                    {/* Area Layanan */}
+                    <div className="flex items-start space-x-2 sm:space-x-3 lg:space-x-4">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <span className="text-lg sm:text-xl lg:text-2xl">📍</span>
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Area Layanan</h4>
+                        <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">Seluruh Jakarta</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Jakarta Selatan, Barat, Timur, Utara, Pusat</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-8 p-6 bg-white/10 rounded-xl">
-                    <h4 className="font-bold text-black mb-3">✨ Keunggulan Kami</h4>
-                    <ul className="space-y-2 text-sm text-gray-800">
-                      <li>✅ Gratis konsultasi dan survei</li>
-                      <li>✅ Tim berpengalaman 9+ tahun</li>
-                      <li>✅ Peralatan modern & higienis</li>
-                      <li>✅ Harga transparan tanpa biaya tersembunyi</li>
-                      <li>✅ Garansi layanan</li>
+                  {/* Keunggulan Kami */}
+                  <div className="mt-4 sm:mt-6 lg:mt-8 p-3 sm:p-4 lg:p-6 bg-white/10 rounded-lg sm:rounded-xl">
+                    <h4 className="font-bold text-black mb-2 sm:mb-3 text-xs sm:text-sm lg:text-base mobile-text-wrap">✨ Keunggulan Kami</h4>
+                    <ul className="space-y-1 text-xs sm:text-sm text-gray-800">
+                      <li className="mobile-text-wrap">✅ Gratis konsultasi dan survei</li>
+                      <li className="mobile-text-wrap">✅ Tim berpengalaman 9+ tahun</li>
+                      <li className="mobile-text-wrap">✅ Peralatan modern & higienis</li>
+                      <li className="mobile-text-wrap">✅ Harga transparan tanpa biaya tersembunyi</li>
+                      <li className="mobile-text-wrap">✅ Garansi layanan</li>
                     </ul>
                   </div>
                 </div>
               </div>
               
               {/* Right Side - Contact Form */}
-              <div>
+              <div className="order-1 lg:order-2 w-full">
                 <Suspense fallback={<div className="animate-pulse bg-gray-200 h-96 rounded-lg"></div>}>
                   <ContactForm />
                 </Suspense>
@@ -159,19 +164,19 @@ export default function HomePage() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-white text-black py-12">
-          <div className="container mx-auto px-6 lg:px-8 xl:px-12">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <h3 className="text-xl font-bold mb-4">Jasa Sedot WC Jakarta</h3>
-                <p className="text-gray-600 mb-4">
+        <footer className="bg-white text-black py-8 sm:py-12">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Jasa Sedot WC Jakarta</h3>
+                <p className="text-gray-600 mb-4 text-sm sm:text-base">
                   Layanan sedot WC terpercaya dengan pengalaman 9+ tahun melayani masyarakat Jakarta.
                 </p>
               </div>
               
-              <div>
-                <h4 className="font-bold mb-4">Area Layanan</h4>
-                <ul className="space-y-2 text-gray-600">
+              <div className="text-center sm:text-left">
+                <h4 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Area Layanan</h4>
+                <ul className="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
                   <li>Jakarta Selatan</li>
                   <li>Jakarta Barat</li>
                   <li>Jakarta Timur</li>
@@ -180,18 +185,18 @@ export default function HomePage() {
                 </ul>
               </div>
               
-              <div>
-                <h4 className="font-bold mb-4">Kontak</h4>
-                <div className="space-y-2 text-gray-600">
-                  <p>📞 081219067233</p>
-                  <p>📧 info@sedotwcjakarta.com</p>
+              <div className="text-center sm:text-left sm:col-span-2 lg:col-span-1">
+                <h4 className="font-bold mb-3 sm:mb-4 text-base sm:text-lg">Kontak</h4>
+                <div className="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+                  <p>📞 0812-1906-7233</p>
+                  <p className="break-all">📧 info@sedotwcjakarta.com</p>
                   <p>🕒 24 Jam Siaga</p>
                 </div>
               </div>
             </div>
             
-            <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-              <p>&copy; 2024 Jasa Sedot WC Jakarta. All rights reserved.</p>
+            <div className="border-t border-gray-200 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-gray-600">
+              <p className="text-sm sm:text-base">&copy; 2024 Jasa Sedot WC Jakarta. All rights reserved.</p>
             </div>
           </div>
         </footer>

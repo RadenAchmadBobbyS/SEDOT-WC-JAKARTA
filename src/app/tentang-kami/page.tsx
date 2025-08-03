@@ -314,24 +314,24 @@ export default function TentangKamiPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-          <div className="container mx-auto px-6 lg:px-8 xl:px-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Siap Melayani Kebutuhan Sedot WC Anda</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+        <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Siap Melayani Kebutuhan Sedot WC Anda</h2>
+            <p className="text-lg sm:text-xl text-blue-100 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
               Dengan pengalaman 9+ tahun dan tim profesional, kami siap memberikan layanan sedot WC terbaik untuk Anda.
               Hubungi kami sekarang untuk konsultasi gratis!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold" asChild>
-                <a href="tel:+6281234567890">
-                  <Phone className="mr-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold w-full sm:w-auto" asChild>
+                <a href="tel:+6281219067233">
+                  <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                   Hubungi Sekarang
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+                className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent w-full sm:w-auto"
                 asChild
               >
                 <a href="/kontak">Lihat Kontak Lengkap</a>

@@ -8,77 +8,33 @@ import { usePathname } from "next/navigation";
 
 export function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPageReady, setIsPageReady] = useState(false);
-  const [isLoadingScreenPresent, setIsLoadingScreenPresent] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     // Reset state when pathname changes
-    setIsPageReady(false);
-    setIsLoadingScreenPresent(true);
+    setIsVisible(false);
     setIsOpen(false); // Close dropdown when navigating
     
-    // Check if loading screen is present
-    const checkLoadingScreen = () => {
-      const hasLoadingScreen = document.querySelector('[data-loading-screen]');
-      setIsLoadingScreenPresent(!!hasLoadingScreen);
-      
-      if (!hasLoadingScreen) {
-        setIsPageReady(true);
-      }
-    };
+    // Simple timer to show floating nav after page load
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
 
-    // Use MutationObserver to watch for loading screen removal
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.removedNodes.forEach((node) => {
-          if (node instanceof Element && node.querySelector('[data-loading-screen]')) {
-            setIsLoadingScreenPresent(false);
-            setIsPageReady(true);
-          }
-        });
-      });
-      
-      // Also check if loading screen is still present
-      checkLoadingScreen();
-    });
-
-    // Start observing
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    // Initial check and periodic checks
-    checkLoadingScreen();
-    const timer1 = setTimeout(checkLoadingScreen, 500);
-    const timer2 = setTimeout(checkLoadingScreen, 1500);
-    const timer3 = setTimeout(checkLoadingScreen, 3500);
-    const timer4 = setTimeout(() => {
-      setIsLoadingScreenPresent(false);
-      setIsPageReady(true);
-    }, 5000); // Force show after 5s
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearTimeout(timer4);
-    };
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
-  // Don't show if page is not ready or loading screen is present
-  if (!isPageReady || isLoadingScreenPresent) {
+  // Don't show if not visible yet
+  if (!isVisible) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-35 right-4 z-50">
+    <div className="fixed bottom-32 right-4 z-[60] sm:bottom-32 sm:right-4" data-floating-element="nav">
       {/* Floating Navigation Button */}
       <button
         onClick={toggleDropdown}

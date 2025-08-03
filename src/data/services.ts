@@ -4,7 +4,7 @@ export const services = [
   {
     icon: Truck,
     title: "Sedot WC Rumah Jakarta",
-    description: "Jasa sedot WC rumah tinggal Jakarta dengan harga mulai Rp 150.000. Melayani rumah 1-3 lantai, cluster, perumahan elite dengan teknisi berpengalaman dan peralatan modern.",
+    description: "Jasa sedot WC rumah tinggal Jakarta. Melayani rumah 1-3 lantai, cluster, perumahan elite dengan teknisi berpengalaman dan peralatan modern.",
     keywords: "sedot wc rumah jakarta, sedot wc rumah tinggal, jasa sedot wc rumah murah",
   },
   {

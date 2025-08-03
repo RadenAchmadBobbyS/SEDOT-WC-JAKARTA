@@ -147,8 +147,8 @@ export default function KontakPage() {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8 xl:px-12">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Layanan Unggulan Kami</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Layanan Unggulan Kami</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Komitmen kami untuk memberikan layanan terbaik dengan standar profesional tinggi
               </p>
             </div>
@@ -285,7 +285,7 @@ export default function KontakPage() {
                   className="border-white text-white hover:bg-white hover:text-red-600 text-lg px-8 py-4 bg-transparent"
                   asChild
                 >
-                  <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer">
+                  <a href="https://wa.me/6281219067233" target="_blank" rel="noreferrer">
                     <MessageCircle className="mr-2 h-6 w-6" />
                     WhatsApp Darurat
                   </a>

@@ -3,6 +3,52 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+  .fixed {
+    position: fixed !important;
+  }
+
+  /* Ensure floating elements are always visible */
+  [data-floating-element] {
+    z-index: 9999 !important;
+    position: fixed !important;
+  }
+
+  /* Fix for mobile hamburger menu */
+  .lg\:hidden {
+    display: block !important;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Contact section mobile fixes */
+  .contact-section {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  /* Text wrapping for mobile */
+  .mobile-text-wrap {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Ensure proper z-index stacking */
+.z-\[60\] {
+  z-index: 60 !important;
+}
+
+/* Prevent layout shift */
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);

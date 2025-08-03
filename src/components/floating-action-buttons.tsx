@@ -6,77 +6,29 @@ import { useEffect, useState } from "react";
 
 export function FloatingActionButtons() {
   const pathname = usePathname();
-  const [isPageReady, setIsPageReady] = useState(false);
-  const [isLoadingScreenPresent, setIsLoadingScreenPresent] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Reset state when pathname changes
-    setIsPageReady(false);
-    setIsLoadingScreenPresent(true);
-    
-    // Check if loading screen is present
-    const checkLoadingScreen = () => {
-      const hasLoadingScreen = document.querySelector('[data-loading-screen]');
-      setIsLoadingScreenPresent(!!hasLoadingScreen);
-      
-      if (!hasLoadingScreen) {
-        setIsPageReady(true);
-      }
-    };
+    // Simple timer to show FAB after page load
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
 
-    // Use MutationObserver to watch for loading screen removal
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.removedNodes.forEach((node) => {
-          if (node instanceof Element && node.querySelector('[data-loading-screen]')) {
-            setIsLoadingScreenPresent(false);
-            setIsPageReady(true);
-          }
-        });
-      });
-      
-      // Also check if loading screen is still present
-      checkLoadingScreen();
-    });
-
-    // Start observing
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
-    // Initial check and periodic checks
-    checkLoadingScreen();
-    const timer1 = setTimeout(checkLoadingScreen, 500);
-    const timer2 = setTimeout(checkLoadingScreen, 1500);
-    const timer3 = setTimeout(checkLoadingScreen, 3500);
-    const timer4 = setTimeout(() => {
-      setIsLoadingScreenPresent(false);
-      setIsPageReady(true);
-    }, 5000); // Force show after 5s
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
-      clearTimeout(timer4);
-    };
+    return () => clearTimeout(timer);
   }, [pathname]);
 
-  // Jangan tampilkan di halaman home, jika page belum ready, atau jika loading screen masih ada
-  if (pathname === "/" || !isPageReady || isLoadingScreenPresent) {
+  if (!isVisible) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-4 z-[60] flex flex-col gap-3" data-floating-element="fab">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/6281234567890?text=Halo, saya butuh jasa sedot WC Jakarta"
+        href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Jakarta"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group"
+        className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group block"
         aria-label="Hubungi via WhatsApp"
       >
         <svg className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
@@ -86,8 +38,8 @@ export function FloatingActionButtons() {
       
       {/* Phone Button */}
       <a
-        href="tel:+6281234567890"
-        className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group"
+        href="tel:+6281219067233"
+        className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 group block"
         aria-label="Telepon langsung"
       >
         <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
