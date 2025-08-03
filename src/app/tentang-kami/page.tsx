@@ -58,19 +58,19 @@ const teamMembers = [
     name: "Budi Hartono",
     position: "Direktur Utama",
     experience: "15+ tahun",
-    image: "/placeholder.svg?height=300&width=300&text=Direktur",
+    image: "/images/worker-2.webp",
   },
   {
-    name: "Sari Wijaya",
+    name: "Adi Wijaya",
     position: "Manajer Operasional",
     experience: "12+ tahun",
-    image: "/placeholder.svg?height=300&width=300&text=Manager",
+    image: "/images/worker-1.webp",
   },
   {
     name: "Ahmad Rizki",
     position: "Kepala Teknisi",
     experience: "10+ tahun",
-    image: "/placeholder.svg?height=300&width=300&text=Teknisi",
+    image: "/images/worker-3.webp",
   },
 ]
 
@@ -104,11 +104,11 @@ export default function TentangKamiPage() {
         <Navbar />
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-green-900 text-white pt-32 pb-24">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-green-900/30"></div>
+        <section className="relative bg-gradient-to-br from-orange-400 via-orange-300 to-orange-500 text-white pt-32 pb-24">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-blue-900/30"></div>
           <div className="container mx-auto px-6 lg:px-8 xl:px-12 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <Badge className="bg-green-500 text-white hover:bg-green-400 font-semibold mb-6">
+              <Badge className="bg-blue-500 text-white hover:bg-blue-400 font-semibold mb-6">
                 ⭐ Terpercaya Sejak 2015 ⭐
               </Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Tentang SedotWC Jakarta</h1>
@@ -138,13 +138,13 @@ export default function TentangKamiPage() {
                     kepuasan 99%.
                   </p>
                   <div className="flex items-center space-x-4">
-                    <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white font-semibold" asChild>
+                    <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold" asChild>
                       <a href="/kontak">Hubungi Kami</a>
                     </Button>
                     <Button
                       size="lg"
                       variant="outline"
-                      className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                      className="border-blue-600 text-blue-600 hover:bg-blue-50 bg-transparent"
                       asChild
                     >
                       <a href="tel:+6281219067233">
@@ -157,10 +157,11 @@ export default function TentangKamiPage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600&text=Sejarah+Perusahaan"
+                  src="/images/sedot-11.webp"
                   alt="Sejarah SedotWC Jakarta - Perusahaan Terpercaya Sejak 2015"
                   width={600}
                   height={500}
+                  quality={90}
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
@@ -184,10 +185,10 @@ export default function TentangKamiPage() {
                   className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg"
                 >
                   <CardHeader className="pb-4">
-                    <div className="mx-auto mb-4 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center">
+                    <div className="mx-auto mb-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
                       <achievement.icon className="h-8 w-8 text-white" />
                     </div>
-                    <div className="text-3xl font-bold text-green-600 mb-2">{achievement.number}</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{achievement.number}</div>
                     <CardTitle className="text-xl font-bold text-gray-900">{achievement.label}</CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -203,9 +204,9 @@ export default function TentangKamiPage() {
         <section className="py-24">
           <div className="container mx-auto px-6 lg:px-8 xl:px-12">
             <div className="grid lg:grid-cols-2 gap-16">
-              <Card className="p-8 shadow-xl border-0 bg-gradient-to-br from-green-50 to-green-100">
+              <Card className="p-8 shadow-xl border-0 bg-gradient-to-br from-blue-50 to-blue-100">
                 <CardHeader className="pb-6">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
                     <Target className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-gray-900">Visi Kami</CardTitle>
@@ -219,9 +220,9 @@ export default function TentangKamiPage() {
                 </CardContent>
               </Card>
 
-              <Card className="p-8 shadow-xl border-0 bg-gradient-to-br from-green-50 to-green-100">
+              <Card className="p-8 shadow-xl border-0 bg-gradient-to-br from-blue-50 to-blue-100">
                 <CardHeader className="pb-6">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
                     <Heart className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-2xl font-bold text-gray-900">Misi Kami</CardTitle>
@@ -229,19 +230,19 @@ export default function TentangKamiPage() {
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span>Memberikan layanan sedot WC berkualitas tinggi dengan harga terjangkau</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span>Menggunakan teknologi dan peralatan modern untuk hasil optimal</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span>Melayani dengan profesional, cepat, dan ramah 24 jam</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span>Menjaga lingkungan dengan penanganan limbah yang bertanggung jawab</span>
                     </li>
                   </ul>
@@ -275,7 +276,7 @@ export default function TentangKamiPage() {
         </section>
 
         {/* Team */}
-        <section className="py-24">
+        <section className="py-24 bg-white">
           <div className="container mx-auto px-6 lg:px-8 xl:px-12">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Tim Profesional Kami</h2>
@@ -285,13 +286,15 @@ export default function TentangKamiPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-                <Card key={index} className="text-center overflow-hidden hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-64 overflow-hidden">
+                <Card key={index} className="text-center overflow-hidden hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+                  <div className="relative h-80 w-full overflow-hidden bg-gray-50">
                     <Image
-                      src={member.image || "/placeholder.svg"}
+                      src={member.image}
                       alt={`${member.name} - ${member.position} SedotWC Jakarta`}
                       fill
-                      className="object-cover"
+                      className="object-contain object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={index === 0}
                     />
                   </div>
                   <CardContent className="p-6">

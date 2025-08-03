@@ -244,23 +244,6 @@ html {
   align-items: center;
 }
 
-/* Preload critical fonts */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/roboto-v30-latin-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/roboto-v30-latin-700.woff2") format("woff2");
-}
-
 /* Reduce layout shift */
 .aspect-ratio-16-9 {
   aspect-ratio: 16 / 9;

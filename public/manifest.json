@@ -1,0 +1,18 @@
+{
+  "name": "SedotWC Jakarta - Layanan Sedot WC Profesional 24 Jam",
+  "short_name": "SedotWC Jakarta",
+  "description": "Layanan sedot WC terpercaya di Jakarta 24 jam dengan teknisi profesional dan harga terjangkau",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["business", "utilities", "lifestyle"],
+  "icons": [],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "shortcuts": []
+}

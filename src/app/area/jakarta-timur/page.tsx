@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Phone, Clock, MapPin, Star, CheckCircle, Truck, ArrowLeft, Users, Award, Shield } from "lucide-react"
 import ContactForm from "@/components/contact-form"
 import Navbar from "@/components/navbar"
+import PageLoader from "@/components/page-loader"
 
 export const metadata: Metadata = {
   title: "Sedot WC Jakarta Timur Terpercaya 24 Jam - Cakung, Cipayung, Kramat Jati | Harga Terjangkau",
@@ -281,14 +282,15 @@ const whyChooseUs = [
 
 export default function JakartaTimurPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <PageLoader>
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-orange-900 to-slate-800 text-white py-12 sm:py-16 lg:py-20 xl:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200&text=Jakarta+Timur+Background')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/images/sedot-wc-jakarta-timur.webp')] bg-cover bg-center opacity-10"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
@@ -838,5 +840,6 @@ export default function JakartaTimurPage() {
         </div>
       </footer>
     </div>
+    </PageLoader>
   )
 }
