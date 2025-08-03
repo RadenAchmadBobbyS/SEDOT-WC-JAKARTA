@@ -96,7 +96,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-black">Telepon/WhatsApp</h4>
-                        <p className="text-lg font-bold text-black">0812-3456-7890</p>
+                        <p className="text-lg font-bold text-black">0812-1906-7233</p>
                         <p className="text-sm text-gray-700">24 Jam Siaga</p>
                       </div>
                     </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-bold mb-4">Kontak</h4>
                 <div className="space-y-2 text-gray-600">
-                  <p>📞 081234567890</p>
+                  <p>📞 081219067233</p>
                   <p>📧 info@sedotwcjakarta.com</p>
                   <p>🕒 24 Jam Siaga</p>
                 </div>

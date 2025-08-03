@@ -19,8 +19,7 @@ export default function Navbar() {
   ]
 
   const galleryItems = [
-    { name: "Foto Layanan", href: "/galeri/layanan", icon: Camera },
-    { name: "Video Proses", href: "/galeri/video", icon: ImageIcon },
+    { name: "Foto Layanan", href: "/gallery", icon: Camera },
     { name: "Before & After", href: "/galeri/before-after", icon: ImageIcon },
   ]
 
@@ -37,7 +36,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-3xl shadow-2xl">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-3xl shadow-2xl">
       <div className="container mx-auto px-6 lg:px-8 xl:px-12">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
@@ -114,7 +113,7 @@ export default function Navbar() {
                     </div>
                     <div className="px-4 pt-3 border-t border-gray-100">
                       <p className="text-xs text-gray-500 text-center">
-                        📞 <span className="font-semibold">0812-3456-7890</span> untuk konsultasi
+                        📞 <span className="font-semibold">0812-1906-7233</span> untuk konsultasi
                       </p>
                     </div>
                   </div>
@@ -183,7 +182,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-full hover:bg-gray-700 transition-colors">
               <Phone className="h-4 w-4 text-blue-400" />
-              <a href="tel:+6281234567890" className="font-bold text-white hover:text-white transition-colors">
+              <a href="tel:+6281219067233" className="font-bold text-white hover:text-white transition-colors">
               </a>
             </div>
             <div className="flex items-center space-x-2 bg-orange-400 px-4 py-2 rounded-full">
@@ -353,7 +352,7 @@ export default function Navbar() {
                   <div className="border-t border-gray-700 px-6 pt-6 pb-6 space-y-4 flex-shrink-0 bg-gray-900/98">
                     {/* Emergency Call Button */}
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105" asChild>
-                      <a href="tel:+6281234567890" className="flex items-center justify-center space-x-3">
+                      <a href="tel:+6281219067233" className="flex items-center justify-center space-x-3">
                         <Phone className="h-5 w-5" />
                         <span className="text-lg">Hubungi Sekarang</span>
                       </a>
@@ -361,7 +360,7 @@ export default function Navbar() {
                     
                     {/* WhatsApp Button */}
                     <Button variant="outline" className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold py-4 rounded-2xl transition-all duration-300" asChild>
-                      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3">
+                      <a href="https://wa.me/6281219067233" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3">
                         <MessageCircle className="h-5 w-5" />
                         <span className="text-lg">Chat WhatsApp</span>
                       </a>

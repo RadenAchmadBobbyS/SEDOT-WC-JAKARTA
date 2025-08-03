@@ -391,3 +391,28 @@ html {
     right: 1rem;
   }
 }
+
+/* Wave Animation for smooth transitions */
+@keyframes wave-motion {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-wave {
+  animation: wave-motion 8s ease-in-out infinite;
+}
+
+.animate-wave-slow {
+  animation: wave-motion 12s ease-in-out infinite;
+}
+
+.animate-wave-reverse {
+  animation: wave-motion 10s ease-in-out infinite reverse;
+}

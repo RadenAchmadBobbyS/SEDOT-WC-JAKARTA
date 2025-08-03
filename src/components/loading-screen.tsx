@@ -36,7 +36,7 @@ export default function LoadingScreen() {
   const CurrentIcon = steps[currentStep].icon
 
   return (
-    <div className="fixed inset-0 bg-orange-300 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-orange-300 flex items-center justify-center z-[9999]" data-loading-screen>
       <div className="text-center space-y-8 px-6">
         {/* Logo */}
         <div className="flex items-center justify-center space-x-3 mb-8">

@@ -62,7 +62,7 @@ export default function ContactForm() {
           <p className="text-gray-600 text-sm">Terima kasih! Tim kami akan segera menghubungi Anda dalam 15 menit.</p>
           <div className="flex items-center space-x-2 text-blue-600">
             <Phone className="h-4 w-4" />
-            <span className="font-semibold text-sm">0812-3456-7890</span>
+            <span className="font-semibold text-sm">0812-1906-7233</span>
           </div>
         </div>
       </Card>
@@ -163,7 +163,7 @@ export default function ContactForm() {
           </Button>
 
           <p className="text-xs text-gray-500 text-center">
-            Atau hubungi langsung: <strong>0812-3456-7890</strong>
+            Atau hubungi langsung: <strong>0812-1906-7233</strong>
           </p>
         </form>
       </CardContent>

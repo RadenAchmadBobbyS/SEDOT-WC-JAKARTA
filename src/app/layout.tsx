@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google"
 import "./globals.css"
 import Script from "next/script"
 import { FloatingNav } from "@/components/floating-nav"
+import { FloatingActionButtons } from "@/components/floating-action-buttons"
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -339,6 +340,7 @@ export default function RootLayout({
       <body className={`${roboto.className} antialiased`}>
         {children}
         <FloatingNav />
+        <FloatingActionButtons />
 
         {/* Google Analytics */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID" strategy="afterInteractive" />

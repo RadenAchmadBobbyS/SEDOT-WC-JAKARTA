@@ -10,13 +10,13 @@ import PageLoader from "@/components/page-loader"
 export const metadata: Metadata = {
   title: "Kontak Kami - SedotWC Jakarta | Hubungi Layanan Sedot WC 24 Jam",
   description:
-    "Hubungi SedotWC Jakarta untuk layanan sedot WC profesional 24 jam. Telepon: 0812-3456-7890, WhatsApp tersedia. Konsultasi gratis, respon cepat 30 menit ke seluruh Jakarta.",
+    "Hubungi SedotWC Jakarta untuk layanan sedot WC profesional 24 jam. Telepon: 0812-1906-7233, WhatsApp tersedia. Konsultasi gratis, respon cepat 30 menit ke seluruh Jakarta.",
   keywords:
     "kontak sedot wc jakarta, telepon sedot wc, whatsapp sedot wc, alamat sedot wc jakarta, customer service sedot wc, layanan darurat sedot wc",
   openGraph: {
     title: "Kontak SedotWC Jakarta - Layanan 24 Jam Siap Melayani",
     description:
-      "Hubungi kami kapan saja untuk layanan sedot WC profesional di Jakarta. Telepon & WhatsApp: 0812-3456-7890. Konsultasi gratis!",
+      "Hubungi kami kapan saja untuk layanan sedot WC profesional di Jakarta. Telepon & WhatsApp: 0812-1906-7233. Konsultasi gratis!",
     type: "website",
     locale: "id_ID",
     url: "https://sedotwc-jakarta.com/kontak",
@@ -30,7 +30,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Telepon & WhatsApp",
-    primary: "0812-3456-7890",
+    primary: "0812-1906-7233",
     secondary: "Tersedia 24 jam sehari",
     action: "tel:+6281234567890",
     actionText: "Hubungi Sekarang",
@@ -195,8 +195,8 @@ export default function KontakPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">📱 Telepon & WhatsApp</h3>
                       <p className="text-gray-600 mb-2">Hubungi kami kapan saja, 24 jam sehari</p>
-                      <a href="tel:+6281234567890" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
-                        0812-3456-7890
+                      <a href="tel:+6281219067233" className="text-2xl font-bold text-blue-600 hover:text-blue-700">
+                        0812-1906-7233
                       </a>
                     </div>
                   </div>
@@ -274,9 +274,9 @@ export default function KontakPage() {
                   className="bg-yellow-500 hover:bg-yellow-400 text-black font-semibold text-lg px-8 py-4"
                   asChild
                 >
-                  <a href="tel:+6281234567890">
+                  <a href="tel:+6281219067233">
                     <Phone className="mr-2 h-6 w-6" />
-                    HUBUNGI DARURAT: 0812-3456-7890
+                    HUBUNGI DARURAT: 0812-1906-7233
                   </a>
                 </Button>
                 <Button
@@ -306,8 +306,8 @@ export default function KontakPage() {
               <p className="text-gray-400 mb-4">Layanan sedot WC profesional terpercaya di Jakarta sejak 2015</p>
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <a href="tel:+6281234567890" className="font-semibold hover:text-blue-400">
-                  0812-3456-7890
+                <a href="tel:+6281219067233" className="font-semibold hover:text-blue-400">
+                  0812-1906-7233
                 </a>
               </div>
             </div>

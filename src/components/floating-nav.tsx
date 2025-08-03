@@ -1,16 +1,81 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MapPin, X } from "lucide-react";
 import { jakartaAreas } from "@/data/areas";
+import { usePathname } from "next/navigation";
 
 export function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPageReady, setIsPageReady] = useState(false);
+  const [isLoadingScreenPresent, setIsLoadingScreenPresent] = useState(true);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Reset state when pathname changes
+    setIsPageReady(false);
+    setIsLoadingScreenPresent(true);
+    setIsOpen(false); // Close dropdown when navigating
+    
+    // Check if loading screen is present
+    const checkLoadingScreen = () => {
+      const hasLoadingScreen = document.querySelector('[data-loading-screen]');
+      setIsLoadingScreenPresent(!!hasLoadingScreen);
+      
+      if (!hasLoadingScreen) {
+        setIsPageReady(true);
+      }
+    };
+
+    // Use MutationObserver to watch for loading screen removal
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.removedNodes.forEach((node) => {
+          if (node instanceof Element && node.querySelector('[data-loading-screen]')) {
+            setIsLoadingScreenPresent(false);
+            setIsPageReady(true);
+          }
+        });
+      });
+      
+      // Also check if loading screen is still present
+      checkLoadingScreen();
+    });
+
+    // Start observing
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Initial check and periodic checks
+    checkLoadingScreen();
+    const timer1 = setTimeout(checkLoadingScreen, 500);
+    const timer2 = setTimeout(checkLoadingScreen, 1500);
+    const timer3 = setTimeout(checkLoadingScreen, 3500);
+    const timer4 = setTimeout(() => {
+      setIsLoadingScreenPresent(false);
+      setIsPageReady(true);
+    }, 5000); // Force show after 5s
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
+      clearTimeout(timer4);
+    };
+  }, [pathname]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  // Don't show if page is not ready or loading screen is present
+  if (!isPageReady || isLoadingScreenPresent) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-35 right-4 z-50">
@@ -69,7 +134,7 @@ export function FloatingNav() {
           </div>
           <div className="px-4 pt-3 border-t border-gray-100">
             <p className="text-xs text-gray-500 text-center">
-              📞 <span className="font-semibold">0812-3456-7890</span> untuk konsultasi
+              📞 <span className="font-semibold">0812-1906-7233</span> untuk konsultasi
             </p>
           </div>
         </div>

@@ -147,9 +147,9 @@ export default function TentangKamiPage() {
                       className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
                       asChild
                     >
-                      <a href="tel:+6281234567890">
+                      <a href="tel:+6281219067233">
                         <Phone className="mr-2 h-4 w-4" />
-                        0812-3456-7890
+                        0812-1906-7233
                       </a>
                     </Button>
                   </div>
@@ -348,8 +348,8 @@ export default function TentangKamiPage() {
               <p className="text-gray-400 mb-4">Layanan sedot WC profesional terpercaya di Jakarta sejak 2015</p>
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <a href="tel:+6281234567890" className="font-semibold hover:text-blue-400">
-                  0812-3456-7890
+                <a href="tel:+6281219067233" className="font-semibold hover:text-blue-400">
+                  0812-1906-7233
                 </a>
               </div>
             </div>
