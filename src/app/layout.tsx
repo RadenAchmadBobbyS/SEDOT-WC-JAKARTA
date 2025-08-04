@@ -14,7 +14,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sedotwcmandala.com"),
+  metadataBase: new URL("https://www.sedotwcmandala.com"),
   title: {
     default: "Sedot WC Jakarta - Layanan Sedot WC Profesional 24 Jam Terpercaya | Harga Murah Bergaransi",
     template: "%s | SedotWC Jakarta - Layanan Terpercaya 24 Jam",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     "sedot wc mall",
     "sedot wc restoran",
   ].join(", "),
-  authors: [{ name: "SedotWC Jakarta", url: "https://sedotwcmandala.com" }],
+  authors: [{ name: "SedotWC Jakarta", url: "https://www.sedotwcmandala.com" }],
   creator: "SedotWC Jakarta",
   publisher: "SedotWC Jakarta",
   formatDetection: {
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://sedotwcmandala.com",
+    url: "https://www.sedotwcmandala.com",
     siteName: "SedotWC Jakarta - Layanan Sedot WC Profesional 24 Jam",
     title: "Sedot WC Jakarta Terpercaya 24 Jam - Harga Murah Bergaransi",
     description:
@@ -130,9 +130,9 @@ export const metadata: Metadata = {
     // },
   },
   alternates: {
-    canonical: "https://sedotwcmandala.com",
+    canonical: "https://www.sedotwcmandala.com",
     languages: {
-      "id-ID": "https://sedotwcmandala.com",
+      "id-ID": "https://www.sedotwcmandala.com",
     },
   },
   category: "business",

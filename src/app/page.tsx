@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: 'id_ID',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.sedotwcmandala.com/',
   },
 };
 

@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/'],
       },
     ],
-    sitemap: 'https://sedotwcmandala.com/sitemap.xml',
-    host: 'https://sedotwcmandala.com',
+    sitemap: 'https://www.sedotwcmandala.com/sitemap.xml',
+    host: 'https://www.sedotwcmandala.com',
   }
 }
