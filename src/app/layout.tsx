@@ -103,11 +103,11 @@ export const metadata: Metadata = {
       "⭐ Layanan Sedot WC Jakarta TERPERCAYA ⭐ Melayani seluruh Jakarta 24 jam. Harga mulai 120rb, Teknisi Profesional, Bergaransi. Hubungi sekarang!",
     images: [
       {
-        url: "/jasa-sedot-wc.png",
+        url: "/jasa-sedot-wc.webp",
         width: 1200,
         height: 630,
         alt: "Sedot WC Jakarta - Layanan Profesional 24 Jam Terpercaya",
-        type: "image/png",
+        type: "image/webp",
       },
     ],
   },
@@ -118,15 +118,16 @@ export const metadata: Metadata = {
     title: "Sedot WC Jakarta Terpercaya 24 Jam - Harga Murah Bergaransi",
     description:
       "⭐ Layanan Sedot WC Jakarta TERPERCAYA ⭐ Melayani seluruh Jakarta 24 jam. Harga mulai 120rb, Teknisi Profesional, Bergaransi.",
-    images: ["/jasa-sedot-wc.png"],
+    images: ["/jasa-sedot-wc.webp"],
   },
   verification: {
-    google: "your-google-site-verification-code",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
-    other: {
-      "msvalidate.01": "your-bing-verification-code",
-    },
+    google: "FgGf9VrXhAtubzRxsE4f8m4xeQXlUIFmxlz4hi7YVgU",
+    // Uncomment dan isi setelah mendapat kode verifikasi dari Google Search Console
+    // yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
+    // other: {
+    //   "msvalidate.01": "your-bing-verification-code",
+    // },
   },
   alternates: {
     canonical: "https://sedotwcmandala.com",

@@ -4,7 +4,6 @@ import { Suspense } from 'react';
 
 // Static imports for critical components
 import Navbar from "@/components/navbar";
-import PageLoader from "@/components/page-loader";
 import { HeroSection } from "@/components/sections/hero-section";
 
 // Dynamic imports for non-critical sections with loading fallbacks
@@ -47,9 +46,8 @@ export const metadata: Metadata = {
 // SSR-optimized Homepage Component
 export default function HomePage() {
   return (
-    <PageLoader>
-      <div className="min-h-screen">
-        <Navbar />
+    <div className="min-h-screen">
+      <Navbar />
 
         {/* Critical above-the-fold content - loaded immediately */}
         <HeroSection />
@@ -201,6 +199,5 @@ export default function HomePage() {
         </div>
         </footer>
       </div>
-    </PageLoader>
   );
 }
