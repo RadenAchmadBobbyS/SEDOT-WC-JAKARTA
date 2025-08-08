@@ -341,13 +341,13 @@ export default function GalleryPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+6281234567890"
+                href="tel:+6281219067233"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 📞 Hubungi Sekarang
               </a>
               <a
-                href="https://wa.me/6281219067233"
+                href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala"
                 className="bg-green-500 text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 💬 WhatsApp

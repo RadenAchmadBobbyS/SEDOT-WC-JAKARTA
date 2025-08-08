@@ -28,7 +28,7 @@ export function FloatingActionButtons() {
     <div className="fixed bottom-6 right-4 z-[50] flex flex-col gap-3 animate-fade-in-up" data-floating-element="fab">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Jakarta"
+        href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-2xl btn-smooth group block animate-gentle-float animate-optimized"

@@ -32,7 +32,7 @@ const contactMethods = [
     title: "Telepon & WhatsApp",
     primary: "0812-1906-7233",
     secondary: "Tersedia 24 jam sehari",
-    action: "tel:+6281234567890",
+    action: "tel:+6281219067233",
     actionText: "Hubungi Sekarang",
     color: "green",
   },
@@ -41,7 +41,7 @@ const contactMethods = [
     title: "WhatsApp Chat",
     primary: "Chat Langsung",
     secondary: "Respon cepat dalam hitungan menit",
-    action: "https://wa.me/6281234567890",
+    action: "https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala",
     actionText: "Chat WhatsApp",
     color: "green",
   },
@@ -285,7 +285,7 @@ export default function KontakPage() {
                   className="border-white text-white hover:bg-white hover:text-red-600 text-lg px-8 py-4 bg-transparent"
                   asChild
                 >
-                  <a href="https://wa.me/6281219067233" target="_blank" rel="noreferrer">
+                  <a href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala" target="_blank" rel="noreferrer">
                     <MessageCircle className="mr-2 h-6 w-6" />
                     WhatsApp Darurat
                   </a>

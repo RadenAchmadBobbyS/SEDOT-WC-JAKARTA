@@ -363,7 +363,7 @@ export default function Navbar() {
                     
                     {/* WhatsApp Button */}
                     <Button variant="outline" className="w-full border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-semibold py-4 rounded-2xl transition-all duration-300 bg-white hover:shadow-lg" asChild>
-                      <a href="https://wa.me/6281219067233" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3">
+                      <a href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center space-x-3">
                         <MessageCircle className="h-5 w-5" />
                         <span className="text-lg">Chat WhatsApp</span>
                       </a>

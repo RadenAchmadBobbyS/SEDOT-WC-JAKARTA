@@ -98,7 +98,7 @@ export default function ContactForm() {
               💬 Tunggu redirect ke WhatsApp atau klik tombol di bawah
             </p>
             <Button 
-              onClick={() => window.open(`https://wa.me/6281219067233`, '_blank')}
+              onClick={() => window.open(`https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala`, '_blank')}
               className="mt-2 bg-green-600 hover:bg-green-700 text-white text-xs px-4 py-2"
             >
               Buka WhatsApp Manual
@@ -255,7 +255,7 @@ export default function ContactForm() {
             <Button 
               type="button"
               variant="outline" 
-              onClick={() => window.open('https://wa.me/6281219067233', '_blank')}
+              onClick={() => window.open('https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala', '_blank')}
               className="border-2 border-green-500 text-green-700 hover:bg-green-50 font-semibold py-2 sm:py-3"
             >
               <span className="text-xs sm:text-sm">📱 Chat WhatsApp Langsung</span>

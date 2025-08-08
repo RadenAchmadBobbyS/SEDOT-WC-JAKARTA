@@ -119,7 +119,7 @@ export function HeroSection() {
                 className="border-2 border-black text-black hover:bg-gray-100 hover:text-gray-900 bg-white/80 backdrop-blur-sm font-bold px-8 sm:px-10 py-4 sm:py-6 text-lg sm:text-xl rounded-full transition-all duration-300 w-full sm:w-auto"
                 asChild
               >
-                <a href="https://wa.me/6281219067233" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                <a href="https://wa.me/6281219067233?text=Halo, saya butuh jasa sedot WC Mandala" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
                   <span>Konsultasi</span>
                 </a>
               </Button>
