@@ -1,19 +1,8 @@
 import type React from "react"
-// Google Tag Manager HEAD
-// eslint-disable-next-line @next/next/no-sync-scripts
-const GTMHead = (
-  <script dangerouslySetInnerHTML={{__html: `
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5TDVS5MN');
-  `}} />
-)
+import Script from "next/script"
 import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import "./globals.css"
-import Script from "next/script"
 import { FloatingNav } from "@/components/floating-nav"
 import { FloatingActionButtons } from "@/components/floating-action-buttons"
 
@@ -305,7 +294,15 @@ export default function RootLayout({
     <html lang="id" className="scroll-smooth">
       <head>
         {/* Google Tag Manager - paste as high in the <head> as possible */}
-        {GTMHead}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5TDVS5MN');
+          `}
+        </Script>
         <link rel="canonical" href="https://sedotwcmandala.com" />
         <link rel="alternate" hrefLang="id" href="https://sedotwcmandala.com" />
 
