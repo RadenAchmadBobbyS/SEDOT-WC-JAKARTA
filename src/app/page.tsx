@@ -30,7 +30,7 @@ const ContactForm = dynamic(() => import("@/components/contact-form"), {
 // Generate metadata for SEO (SSR)
 export const metadata: Metadata = {
   title: 'Jasa Sedot WC Jakarta Terpercaya 24 Jam - Murah & Profesional',
-  description: 'Jasa Sedot WC Jakarta terpercaya dengan layanan 24 jam. Melayani seluruh DKI Jakarta dengan teknisi profesional dan bergaransi.',
+  description: 'Jasa Sedot WC Jakarta terpercaya dengan layanan 24 jam, harga murah. Melayani seluruh DKI Jakarta dengan teknisi profesional dan bergaransi.',
   keywords: 'sedot wc jakarta, jasa sedot wc jakarta murah, sedot wc 24 jam jakarta, sedot wc jakarta selatan barat timur utara pusat',
   openGraph: {
     title: 'Jasa Sedot WC Jakarta Terpercaya 24 Jam',
