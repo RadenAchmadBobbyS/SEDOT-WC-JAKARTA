@@ -339,7 +339,7 @@ export default function JakartaTimurPage() {
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400">45-90</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400">10-20</div>
                   <div className="text-xs sm:text-sm text-orange-200">Menit Respon</div>
                 </div>
                 <div className="text-center">
@@ -472,7 +472,7 @@ export default function JakartaTimurPage() {
                     <div className="flex items-center justify-between text-xs sm:text-sm">
                       <div className="flex items-center space-x-2">
                         <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
-                        <span className="text-gray-600">Respon: 45-90 menit</span>
+                        <span className="text-gray-600">Respon: 10-30 menit</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
@@ -795,15 +795,15 @@ export default function JakartaTimurPage() {
                   <div className="space-y-2 text-xs sm:text-sm text-gray-600">
                     <div className="flex justify-between">
                       <span>• Area Dekat (Matraman, Jatinegara):</span>
-                      <span className="font-semibold text-green-600">45-60 menit</span>
+                      <span className="font-semibold text-green-600">10-30 menit</span>
                     </div>
                     <div className="flex justify-between">
                       <span>• Area Tengah (Kramat Jati, Makasar):</span>
-                      <span className="font-semibold text-blue-600">60-75 menit</span>
+                      <span className="font-semibold text-blue-600">10-35 menit</span>
                     </div>
                     <div className="flex justify-between">
                       <span>• Area Jauh (Cipayung, Pasar Rebo):</span>
-                      <span className="font-semibold text-orange-600">75-90 menit</span>
+                      <span className="font-semibold text-orange-600">10-30 menit</span>
                     </div>
                   </div>
                 </div>

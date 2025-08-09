@@ -108,7 +108,7 @@ export default function HomePage() {
                       <div className="min-w-0 flex-1">
                         <h4 className="font-semibold text-black text-xs sm:text-sm lg:text-base leading-tight mobile-text-wrap">Email</h4>
                         <p className="text-sm sm:text-base lg:text-lg text-black mobile-text-wrap">info@sedotwcmandala.com</p>
-                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Respon dalam 1 jam</p>
+                        <p className="text-xs sm:text-sm text-gray-700 mobile-text-wrap">Respon Cepat</p>
                       </div>
                     </div>
                     

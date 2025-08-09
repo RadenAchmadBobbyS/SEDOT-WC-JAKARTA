@@ -13,9 +13,10 @@ export default function Navbar() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null)
 
   const navigation = [
-    { name: "Beranda", href: "/"},
-    { name: "Tentang Kami", href: "/tentang-kami"},
-    { name: "Kontak", href: "/kontak"},
+  { name: "Beranda", href: "/"},
+  { name: "Artikel", href: "/artikel"},
+  { name: "Tentang Kami", href: "/tentang-kami"},
+  { name: "Kontak", href: "/kontak"},
   ]
 
   const galleryItems = [
@@ -226,6 +227,7 @@ export default function Navbar() {
                         const getIcon = (name: string) => {
                           switch (name) {
                             case "Beranda": return Home
+                            case "Artikel": return Info
                             case "Tentang Kami": return Info
                             case "Kontak": return MessageCircle
                             default: return Home

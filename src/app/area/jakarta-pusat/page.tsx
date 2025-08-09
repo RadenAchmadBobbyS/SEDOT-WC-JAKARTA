@@ -12,7 +12,7 @@ import PageLoader from "@/components/page-loader"
 export const metadata: Metadata = {
   title: "Sedot WC Jakarta Pusat Terpercaya 24 Jam - Menteng, Gambir, Tanah Abang | Layanan Premium",
   description:
-    "⭐ SEDOT WC JAKARTA PUSAT TERPERCAYA ⭐ Melayani Gambir, Tanah Abang, Menteng, Senen, Cempaka Putih, Johar Baru 24 jam. Teknisi Profesional, Bergaransi, Respon Tercepat 20 menit. HUBUNGI SEKARANG!",
+    "⭐ SEDOT WC JAKARTA PUSAT TERPERCAYA ⭐ Melayani Gambir, Tanah Abang, Menteng, Senen, Cempaka Putih, Johar Baru 24 jam. Teknisi Profesional, Bergaransi, Respon Tercepat 1-5 menit. HUBUNGI SEKARANG!",
   keywords:
     "sedot wc jakarta pusat, sedot wc menteng, sedot wc gambir, sedot wc tanah abang, sedot wc senen, sedot wc cempaka putih, sedot wc johar baru, sedot wc kemayoran, sedot wc sawah besar, jasa sedot wc jakarta pusat, layanan sedot wc jakarta pusat 24 jam, sedot wc murah jakarta pusat, sedot wc darurat jakarta pusat, teknisi sedot wc jakarta pusat, perusahaan sedot wc jakarta pusat, kontraktor sedot wc jakarta pusat",
   openGraph: {
@@ -149,7 +149,7 @@ const testimonials = [
     name: "Pak Joko",
     location: "Cempaka Putih",
     rating: 5,
-    comment: "Pelayanan darurat di Cempaka Putih sangat membantu. Tim responsif dan datang dalam 25 menit. Excellent!",
+    comment: "Pelayanan darurat di Cempaka Putih sangat membantu. Tim responsif dan datang dalam 20 menit. Excellent!",
     service: "Layanan Darurat",
     date: "1 minggu lalu",
   },
@@ -249,8 +249,8 @@ const whyChooseUs = [
   {
     icon: <Shield className="h-8 w-8 text-blue-600" />,
     title: "Respon Tercepat",
-    description: "Waktu respon tercepat di Jakarta dengan rata-rata 20-45 menit ke seluruh Jakarta Pusat",
-    stats: "20-45 Menit",
+    description: "Waktu respon tercepat di Jakarta dengan rata-rata 10-20 menit ke seluruh Jakarta Pusat",
+    stats: "1-5 Menit",
   },
 ]
 
@@ -315,7 +315,7 @@ export default function JakartaPusatPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-6 lg:pt-8">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">20-45</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">10-20</div>
                   <div className="text-xs sm:text-sm text-purple-200">Menit Respon</div>
                 </div>
                 <div className="text-center">
@@ -448,7 +448,7 @@ export default function JakartaPusatPage() {
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs lg:text-sm gap-2 sm:gap-0">
                       <div className="flex items-center space-x-2">
                         <Clock className="h-3 w-3 lg:h-4 lg:w-4 text-green-600" />
-                        <span className="text-gray-600">Respon: 20-45 menit</span>
+                        <span className="text-gray-600">Respon: 1-5 menit</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Phone className="h-3 w-3 lg:h-4 lg:w-4 text-blue-600" />

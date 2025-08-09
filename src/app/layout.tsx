@@ -335,7 +335,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+           <link rel="icon" href="/favicon.png" type="image/png" />
+           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/jasa-sedot-wc.png" />
         <link rel="manifest" href="/manifest.json" />
 

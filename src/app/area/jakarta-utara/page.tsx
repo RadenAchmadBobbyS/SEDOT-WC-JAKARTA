@@ -121,7 +121,7 @@ const testimonials = [
     name: "Maya Sari",
     location: "Koja",
     rating: 5,
-    comment: "Pelayanan darurat di Koja sangat membantu. Tim responsif dan datang dalam 40 menit. Sangat puas!",
+    comment: "Pelayanan darurat di Koja sangat membantu. Tim responsif dan datang dalam 20 menit. Sangat puas!",
     service: "Layanan Darurat",
     date: "1 minggu lalu",
   },
@@ -282,7 +282,7 @@ export default function JakartaUtaraPage() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 pt-6 lg:pt-8">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">30-60</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">20-30</div>
                   <div className="text-xs sm:text-sm text-teal-200">Menit Respon</div>
                 </div>
                 <div className="text-center">
@@ -415,7 +415,7 @@ export default function JakartaUtaraPage() {
                     <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-xs lg:text-sm gap-2 sm:gap-0">
                       <div className="flex items-center space-x-2">
                         <Clock className="h-3 w-3 lg:h-4 lg:w-4 text-green-600" />
-                        <span className="text-gray-600">Respon: 30-60 menit</span>
+                        <span className="text-gray-600">Respon: 20-30 menit</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Phone className="h-3 w-3 lg:h-4 lg:w-4 text-blue-600" />
@@ -736,15 +736,15 @@ export default function JakartaUtaraPage() {
                   <div className="space-y-1 lg:space-y-2 text-xs lg:text-sm text-gray-600">
                     <div className="flex flex-col sm:flex-row sm:justify-between">
                       <span>• Area Premium (Kelapa Gading, Pluit):</span>
-                      <span className="font-semibold text-green-600 sm:ml-2">30-40 menit</span>
+                      <span className="font-semibold text-green-600 sm:ml-2">20-30 menit</span>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:justify-between">
                       <span>• Area Wisata (Ancol, Pademangan):</span>
-                      <span className="font-semibold text-blue-600 sm:ml-2">35-45 menit</span>
+                      <span className="font-semibold text-blue-600 sm:ml-2">25-35 menit</span>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:justify-between">
                       <span>• Area Industri (Cilincing, Tanjung Priok):</span>
-                      <span className="font-semibold text-orange-600 sm:ml-2">45-60 menit</span>
+                      <span className="font-semibold text-orange-600 sm:ml-2">25-30 menit</span>
                     </div>
                   </div>
                 </div>

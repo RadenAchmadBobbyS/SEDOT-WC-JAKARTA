@@ -151,7 +151,7 @@ const testimonials = [
     location: "Jagakarsa",
     rating: 5,
     comment:
-      "Layanan darurat di Jagakarsa sangat membantu. Tim responsif dan peralatan lengkap. Datang dalam 25 menit!",
+      "Layanan darurat di Jagakarsa sangat membantu. Tim responsif dan peralatan lengkap. Datang dalam 20 menit!",
     service: "Layanan Darurat",
     date: "3 hari lalu",
   },
@@ -199,7 +199,7 @@ const whyChooseUs = [
   {
     icon: <Shield className="h-8 w-8 text-purple-600" />,
     title: "Respon Tercepat",
-    description: "Waktu respon tercepat 20-45 menit untuk seluruh area Jakarta Selatan",
+    description: "Waktu respon tercepat 10-25 menit untuk seluruh area Jakarta Selatan",
     stats: "Rata-rata 32 Menit",
   },
 ]
@@ -338,7 +338,7 @@ export default function JakartaSelatanPage() {
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400">20-45</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400">10-25</div>
                   <div className="text-xs sm:text-sm text-blue-200">Menit Respon</div>
                 </div>
                 <div className="text-center">
@@ -472,7 +472,7 @@ export default function JakartaSelatanPage() {
                     <div className="flex items-center justify-between text-xs sm:text-sm">
                       <div className="flex items-center space-x-2">
                         <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
-                        <span className="text-gray-600">Respon: 20-45 menit</span>
+                        <span className="text-gray-600">Respon: 10-25 menit</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
@@ -803,11 +803,11 @@ export default function JakartaSelatanPage() {
                     </div>
                     <div className="flex justify-between">
                       <span>• Area Tengah (Cilandak, Tebet):</span>
-                      <span className="font-semibold text-blue-600">30-40 menit</span>
+                      <span className="font-semibold text-blue-600">20-30 menit</span>
                     </div>
                     <div className="flex justify-between">
                       <span>• Area Pinggir (Jagakarsa, Pesanggrahan):</span>
-                      <span className="font-semibold text-orange-600">40-45 menit</span>
+                      <span className="font-semibold text-orange-600">20-30 menit</span>
                     </div>
                   </div>
                 </div>

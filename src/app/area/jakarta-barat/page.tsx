@@ -12,7 +12,7 @@ import PageLoader from "@/components/page-loader"
 export const metadata: Metadata = {
   title: "Sedot WC Jakarta Barat Terpercaya 24 Jam - Kebon Jeruk, Kembangan, Palmerah | Harga Murah",
   description:
-    "⭐ SEDOT WC JAKARTA BARAT TERPERCAYA ⭐ Melayani Kebon Jeruk, Kembangan, Palmerah, Grogol Petamburan, Cengkareng 24 jam. Teknisi Profesional, Bergaransi, Respon 30 menit. HUBUNGI SEKARANG!",
+    "⭐ SEDOT WC JAKARTA BARAT TERPERCAYA ⭐ Melayani Kebon Jeruk, Kembangan, Palmerah, Grogol Petamburan, Cengkareng 24 jam. Teknisi Profesional, Bergaransi, Respon 1-5 menit. HUBUNGI SEKARANG!",
   keywords:
     "sedot wc jakarta barat, sedot wc kebon jeruk, sedot wc kembangan, sedot wc palmerah, sedot wc grogol petamburan, sedot wc cengkareng, sedot wc taman sari, sedot wc tambora, sedot wc kalideres, jasa sedot wc jakarta barat, layanan sedot wc jakarta barat 24 jam, harga sedot wc jakarta barat, sedot wc murah jakarta barat, sedot wc darurat jakarta barat, teknisi sedot wc jakarta barat, perusahaan sedot wc jakarta barat, kontraktor sedot wc jakarta barat",
   openGraph: {
@@ -320,7 +320,7 @@ export default function JakartaBaratPage() {
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pt-6 sm:pt-8">
                 <div className="text-center">
-                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">30-60</div>
+                  <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-400">1</div>
                   <div className="text-xs sm:text-sm text-green-200">Menit Respon</div>
                 </div>
                 <div className="text-center">
@@ -453,7 +453,7 @@ export default function JakartaBaratPage() {
                     <div className="flex items-center justify-between text-xs sm:text-sm">
                       <div className="flex items-center space-x-1.5 sm:space-x-2">
                         <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-green-600" />
-                        <span className="text-gray-600">Respon: 30-60 menit</span>
+                        <span className="text-gray-600">Respon: 1-5 menit</span>
                       </div>
                       <div className="flex items-center space-x-1.5 sm:space-x-2">
                         <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600" />
