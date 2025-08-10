@@ -24,7 +24,7 @@ export async function GET() {
     const doc = await col.findOne({ _id: "global" });
     const views = doc?.views || 0;
     return NextResponse.json({ views });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ views: 0 });
   }
 }
@@ -40,9 +40,9 @@ export async function POST() {
       { $inc: { views: 1 } },
       { upsert: true, returnDocument: "after" }
     );
-    const views = (result && "views" in result ? (result as any).views : undefined) || 1;
+    const views = (result && "views" in result ? (result as { views: number }).views : undefined) || 1;
     return NextResponse.json({ views });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ error: "Failed to update views" }, { status: 500 });
   }
 }
