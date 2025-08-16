@@ -142,7 +142,7 @@ export function AreasSection() {
                         {/* Buttons */}
                         <div className="flex items-center justify-between gap-3">
                           <a 
-                            href={`tel:+6281234567890`}
+                            href={`tel:+6281219067233`}
                             className="bg-gray-800 hover:bg-gray-700 text-white font-black p-3 rounded-lg btn-smooth flex items-center justify-center"
                           >
                             <Phone className="h-4 w-4 text-blue-400 transition-colors duration-300" />
@@ -216,7 +216,7 @@ export function AreasSection() {
                               {/* Buttons */}
                               <div className="flex items-center justify-between gap-4">
                                 <a 
-                                  href={`tel:+6281234567890`}
+                                  href={`tel:+6281219067233`}
                                   className="bg-gray-800 hover:bg-gray-700 text-white font-black p-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center"
                                 >
                                   <Phone className="h-5 w-5 text-blue-400" />

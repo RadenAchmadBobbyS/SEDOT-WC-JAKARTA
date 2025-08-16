@@ -501,7 +501,7 @@ export default function WCMampetArticle() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-white text-red-600 hover:bg-gray-100">
-                    <a href="tel:+6281234567890" className="font-bold">
+                    <a href="tel:+6281219067233" className="font-bold">
                       📞 Hubungi Darurat: 081219067233
                     </a>
                   </Button>
